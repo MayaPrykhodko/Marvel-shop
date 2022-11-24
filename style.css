@@ -1,0 +1,554 @@
+/* HEADER */
+.header {
+  display: flex; 
+  min-height: 59px; 
+  justify-content: space-around;
+  align-items: center;
+  gap: 280px;
+  background-color: black;
+}
+
+.header__logo {
+  display: flex;
+}
+
+.header__menu{
+  display: flex;
+  font-size: 14px;
+}
+
+.header__auth{
+  display: flex;
+}
+
+.header-logo {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: #C4C4C4;
+    width: 150px;
+    height: 42px;
+}
+
+.header-menu {
+  display: flex;
+  justify-content:space-between;
+  gap: 41px;
+}
+
+.header-menu__item{
+  width: 66px;
+  text-align: center;
+}
+
+.header-menu__item a{
+  color:#FFFFFF;
+  text-decoration: none;
+}
+
+.header-auth{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.header-auth__img{
+  position: absolute;
+  z-index: 1;
+}
+
+.button {
+ width: 90px;
+ height: 23px;
+ border-radius: 15px;
+ text-align: center;
+}
+
+.button_signin {
+  background-color: #EE171F;
+  color:#C4C4C4;
+}
+
+.button_signup {
+  background-color:#FFFFFF;
+  color: #000000;
+}
+
+/* BANNER */
+.tech-block {
+  display: flex;
+  background: black;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-around;
+  min-height: 496px;
+  background-image: url("pictures/bg.png");
+  color: #FFFFFF;
+}
+
+.banner__search {
+  display: flex;
+  flex-basis: 30%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 35px;
+}
+
+.banner__review {
+  display: flex;
+  flex-basis: 35%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.banner-welcome-content {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.banner-search {
+  display: flex;
+}
+
+.banner-input {
+  min-height: 35px;
+  min-width: 206px;
+  border-radius: 17.5px;
+  text-align: left;
+  font-size: 12px;
+  color: #868686;
+}
+
+.banner-search__icon {
+  position: relative;
+  right: 35px;
+  width: 40px;
+  height: 40px;
+}
+
+.banner-quote {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.banner-quote-phrase {
+  font-size: 24px;
+  font-style: italic;
+}
+
+.banner-quote-author {
+  font-size: 14px;
+}
+
+.banner-comics-img{
+  display: flex;
+  align-items: center;
+  min-width: 230px;
+
+}
+
+.banner-comics-img__item {
+  position: absolute;
+} 
+
+.img {
+  min-height:285px;
+  min-width:195px;
+  border-radius: 5px; 
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
+.img_comics1 {
+  background-image: url("pictures/4.png");
+  transform: rotate(7.83deg);
+}
+
+.img_comics2{
+  background-image: url("pictures/3.png");
+  transform: rotate(4.82deg);
+}
+
+.img_comics3{
+  background-image: url("pictures/2.png");
+  transform: rotate(2.5deg);
+}
+
+.img_comics4{
+  background-image: url("pictures/1.png");
+}
+
+.banner-comics-description{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;    
+}
+
+.banner-comics-title{
+  font-size: 24px;
+}
+
+.banner-comics-plot{
+  font-size: 14px;
+  min-width: 284px;
+}
+
+.banner-comics-button{
+  width: 84px;
+  height: 23px;
+  border-radius: 14px;
+  background-color: #EE171F;
+  color: #FFFFFF;
+  font-size: 12px;
+  text-align: center;
+  line-height: 17px;
+}
+
+.banner-comics-description__ellipse{
+  position: absolute;
+  transform:translate(-25px,160px);
+}
+
+.banner-comics-ellipse{
+  display: flex;
+  gap: 9px;
+}
+
+.ellipse {
+  min-width: 9px;
+  min-height: 9px;
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
+.ellipse_bright{
+  background-image: url('pictures/Ellipse\ 1.png');
+}
+
+.ellipse_dim{
+  background-image: url('pictures/Ellipse\ 2.png');
+}
+
+/* RELEASE */
+.release {
+  display: flex;
+  min-height: 593px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.release__title {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.release__comics-cards {
+  display: flex;
+  justify-content: center;
+  gap:48px;
+}
+
+.comics-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  width: 232px;
+  height: 352px;
+  border-radius: 35px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.card_comics1 {
+  background-image: url("./pictures/card1.png");
+}
+
+.card_comics2 {
+  background-image: url("./pictures/card2.png");
+}
+
+.card_comics3 {
+  background-image: url("./pictures/card3.png");
+}
+
+.card_comics4 {
+  background-image: url("./pictures/card4.png");
+}
+
+.comics-card__rating {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  transform: translate(0, 313px);
+  background: #FFFFFF;
+  border-radius: 0px 20px 0px 35px;
+  width: 71px;
+  height: 39px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.comics-card-value {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.comics-card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.name-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.comics-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.collection-name {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.comics-price {
+  color: #EE171F;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* CALENDAR */
+.calendar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 61px;
+  min-height: 328px;
+}
+
+.calendar__month{
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.month {
+  display: flex;
+  justify-content: space-around;
+  align-items:flex-end; 
+  min-width: 319px;
+  min-height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.month__poster1 {
+  background-image: url("./pictures/month1.png");
+}
+
+.month__poster2 {
+  background-image: url("./pictures/month2.png");
+}
+
+.month__poster3 {
+  background-image: url("./pictures/month3.png");
+}
+
+.month__title{
+  margin-bottom: 20px; 
+}
+
+.month__arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 25px;
+  background-color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+
+/* CHARACTERS */
+.characters {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 507px;
+  gap: 96px;
+}
+
+.characters-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+}
+
+.characters__list {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.characters-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.characters-card {
+  border-radius: 35px;
+  width: 196px;
+  height: 294px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.card_spiderman {
+  background-image: url("./pictures/Heroes-spiderman.png");
+}
+
+.card_wolverine {
+  background-image: url("./pictures/Heroes-wolverine.png");
+}
+
+.card_iron-man {
+  background-image: url("./pictures/Heroes-iron-man.png");
+}
+
+.card_captain-america{
+  background-image: url("./pictures/Heroes-captain-America.png");
+}
+
+.card_captain-marvel{
+  background-image: url("./pictures/Heroes-captain-Marvel.png");
+}
+
+.characters-card__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 70px;
+  width: 196px;
+  border-radius: 35px;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12.5px);
+}
+
+.heroes-name {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  min-height: 347px;
+  justify-content:center;
+  gap: 540px;
+  align-items: center;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 12px;
+  gap: 21px;
+}
+
+.footer__nav {
+  display: flex;
+  font-size: 12px;
+  gap: 55px;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #C4C4C4;
+  width: 233px;
+  height: 65px;
+}
+
+.footer-copyright {
+  color: #7C7C7C;
+  display: block;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 17px;
+}
+ 
+.icon {
+  display: block;
+  width: 37.5px;
+  height: 37.5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon a {
+  display: block;
+  height: 100%;
+}
+
+.icon_instagram {
+  background-image: url("./pictures/instagram.png");
+}
+
+.icon_twitter {
+  background-image: url("./pictures/twitter.png");
+}
+
+.icon_facebook {
+  background-image: url("./pictures/facebook.png");
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  min-height: 160px;
+  gap: 15px;
+}
+
+.footer-menu__title_bold {
+  font-weight: bold;
+}
+
+.footer-menu__item  {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
