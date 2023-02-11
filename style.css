@@ -1297,7 +1297,7 @@
   }
 
   .header__menu,
-  .header__user-profile {
+  .header__auth {
     display: none;
   }
 
