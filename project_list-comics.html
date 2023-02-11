@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script-list-comics.js" defer></script>
+    <script src="./mustache.min.js"></script>
+    <title>Marvel-project</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header__logo">
+            <div class="header-logo">Logo</div>
+        </div>
+        <div class="header__menu">
+            <div class="header-menu">
+                <div class="header-menu__item">
+                    <a href="#" class="home">Home</a>
+                </div>
+                <div class="header-menu__item">
+                    <a href="#" class="news">News</a>
+                </div>
+                <div class="header-menu__item">
+                    <a href="#" class="comics">Comics</a>
+                </div>
+                <div class="header-menu__item">
+                    <a href="#" class="contact">Contact us</a>
+                </div>
+                <div class="header-menu__item">
+                    <a href="#" class="account">Personal account</a>
+                </div>
+            </div>
+        </div>
+        <div class="header__user-profile">
+            <div class="user-profile">
+                <div class="user-profile__cart">
+                    <div class="cart">
+                        <div class="cart__ellipse">
+                            <div class="count">0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-profile__user-photo">
+                    <div class="user-photo">
+                        <img src="./pictures/user.png" alt="user" />
+                    </div>
+                </div>
+                <div class="user-profile__chevron-down">
+                    <div class="img-chevron-down">
+                        <img src="./pictures/chevron-down.png" alt="chevron-down" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__icon">
+            <div class="burger">
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="popup-modalsignup">
+        <div class="popup-modalsignup__body">
+            <div class="modalsignup">
+                <div class="modalsignup__content">
+                    <div class="modalsignup-header">
+                        <div class="modalsignup-header__title"><strong>Signup</strong></div>
+                        <div class="modalsignup-header__subtitle">Already have an account?<a href="#"
+                                class="modalsignup-header__link"> Sign in</a>
+                        </div>
+                    </div>
+                    <div class="form form_signup">
+                        <form name="signup" action="" method="POST">
+                            <div class="form__login">
+                                <input type="text" name="login" placeholder="Michel" required minlength="6" />
+                            </div>
+                            <div class="form__username">
+                                <div class="userfirstname">
+                                    <input type="text" name="firstname" placeholder="First name" />
+                                </div>
+                                <div class="userlastname">
+                                    <input type="text" name="lastname" placeholder="Last name" />
+                                </div>
+                            </div>
+                            <div class="form__email">
+                                <input type="email" name="email" placeholder="Email" required />
+                            </div>
+                            <div class="form__password">
+                                <input type="password" name="password" placeholder="Password" required />
+                            </div>
+                            <div class="form__button">
+                                <div class="form-button form-button_register"><a href="#"
+                                        class="form-button-link">Register</a></div>
+                            </div>
+                            <div class="form__terms">
+                                <div class="form__checkbox">
+                                    <input type="checkbox" name="checkbox" />
+                                </div>
+                                <div class="form__termstext">I have read and agree to the <a href="#"
+                                        class="form__link">Terms of Service</a></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modalsignup__banner"></div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-modalsignin">
+        <div class="popup-modalsignin__body">
+            <div class="modalsignin">
+                <div class="modalsignin__content">
+                    <div class="modalsignin-header">
+                        <div class="modalsignin-header__title"><strong>Signin</strong></div>
+                        <div class="modalsignin-header__subtitle">Don’t have an account?<a href="#"
+                                class="modalsignin-header__link"> Sign up</a></div>
+                    </div>
+                    <div class="form form_signin">
+                        <form name="signin" action="" method="POST">
+                            <div class="form__login">
+                                <input type="text" name="login" placeholder="Michel" />
+                            </div>
+                            <div class="form__password">
+                                <input type="password" name="password" placeholder="Password" />
+                            </div>
+                            <div class="form__button">
+                                <div class="form-button form-button_signin"><a href="#"
+                                        class="form-button-link">Login</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modalsignin__banner"></div>
+            </div>
+        </div>
+    </div>
+    <div class="filter-form">
+        <div class="filter-form__item">
+            <div class="filter-form-title">Filter by</div>
+            <div class="filter">
+                <div class="filter__characters">
+                    <select class="characters-list">
+                        <option value="">Characters</option>
+                        <option value="Spiderman">Spiderman</option>
+                        <option value="Hulk">Hulk</option>
+                        <option value="Star-Lord"> Star-Lord</option>
+                        <option value="Captain America">Captain America</option>
+                        <option value="Thor">Thor</option>
+                        <option value="Iron-Man">Iron-Man</option>
+                    </select>
+                </div>
+                <div class="filter__prices">
+                    <select class="prices">
+                        <option value="">Prices</option>
+                        <option value="20">$0-20</option>
+                        <option value="21-40">$21-40</option>
+                        <option value="41">from $41...</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="filter-form__item">
+            <div class="sort-title">Sort by</div>
+            <div class="sort">
+                <div class="sort__item">
+                    <select class="sort-list">
+                        <option value="">...</option>
+                        <option value="cheap-expensive">From cheap to expensive</option>
+                        <option value="expensive-cheap">From expensive to cheap</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="comics-row">
+        <div class="comics-row__comics-cards">
+            <template id="comics-card">
+                <div class="comics-card" data-character={{character}}>
+                    <div class="comics-card__card">
+                        <div class="card"><img src={{imagePath}} alt="comics-card" /></div>
+                    </div>
+                    <div class="comics-card__rating">
+                        <div class="comics-card-vector"><img src="./pictures/Vector.png" /></div>
+                        <div class="comics-card-value">{{rating}}</div>
+                    </div>
+                    <div class="comics-card__price">
+                        <div class="name-info">
+                            <div class="comics-name">{{name}}</div>
+                            <div class="collection-name">Marvel Comics</div>
+                        </div>
+                        <div class="comics-price">$ {{price}}</div>
+                    </div>
+                    <div class="comics-card__description">
+                        <div class="comics-card-description">
+                            <div class="comics-card-description__top-part">
+                                <div class="comics-plot">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Maecenas
+                                    bibendum faucibus semper. Suspendisse potenti. Donec ac massa sem. Pellentesque in
+                                    bibendum
+                                    risus. Pellentesque mattis, quam.</div>
+                            </div>
+                            <div class="comics-card-description__bottom-part">
+                                <div class="comics-price">$ {{price}}</div>
+                                <div class="comics-info">
+                                    <div class="comics-info__item">
+                                        <div class="comics-name">{{name}}</div>
+                                        <div class="collection-name">Marvel Comics</div>
+                                    </div>
+                                    <div class="comics-info__item">
+                                        <div class="comics-button comics-button_release">See details</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer__info">
+            <div class="footer-logo">Logo</div>
+            <div class="footer-copyright">Copyright 2022 Super-Heroes Shop</div>
+            <div class="footer-icons">
+                <div class="footer-icons__item">
+                    <div class="icon icon_instagram"><a href="#"></a></div>
+                </div>
+                <div class="footer-icons__item">
+                    <div class="icon icon_twitter"><a href="#"></a></div>
+                </div>
+                <div class="footer-icons__item">
+                    <div class="icon icon_facebook"><a href="#"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__nav">
+            <div class="footer-menu">
+                <div class="footer-menu__title footer-menu__title_bold">Menu</div>
+                <div class="footer-menu__item">
+                    <a href="#" class="home">Home</a>
+                    <a href="#" class="news">News</a>
+                    <a href="#" class="comics">Comics</a>
+                </div>
+            </div>
+            <div class="footer-menu">
+                <div class="footer-menu__title footer-menu__title_bold">Company</div>
+                <div class="footer-menu__item">
+                    <a href="#" class="management">Management</a>
+                    <a href="#" class="story">Our story</a>
+                    <a href="#" class="career">Career</a>
+                </div>
+            </div>
+            <div class="footer-menu">
+                <div class="footer-menu__title footer-menu__title_bold">Support</div>
+                <div class="footer-menu__item">
+                    <a href="#" class="center">Support Center</a>
+                    <a href="#" class="transaction">Transaction</a>
+                    <a href="#" class="contact">Contact us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

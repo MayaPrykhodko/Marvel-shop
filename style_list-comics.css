@@ -1,0 +1,56 @@
+.filter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 570px;
+    min-height: 155px;
+    padding-top: 59px;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.filter div {
+    display: inline-block;
+}
+
+.filter-form__item {
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filter-form select {
+    width: 160px;
+    height: 28px;
+    border-radius: 14px;
+    background: #DBDBDB;
+    border-color: #DBDBDB;
+    color: #868686;
+    padding: 0px 7px;
+}
+
+.comics-row {
+    display: flex;
+    justify-content: center;
+}
+
+.comics-row__comics-cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1072px;
+    height:fit-content;
+    gap: 48px;
+}
+
+.sort select {
+    width: 146px;
+    height: 28px;
+    border-radius: 14px;
+    background: #DBDBDB;
+    border-color: #DBDBDB;
+    color: #868686;
+}

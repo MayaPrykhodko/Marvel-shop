@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- <script src="./script.js" defer></script> -->
+    <!-- <script src="./script-list-comics.js" defer></script>
+    <script src="./mustache.min.js"></script> -->
+    <script src="./script-comics-details.js" defer></script>
+    <title>Marvel-project</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header__logo">
+            <div class="header-logo">Logo</div>
+        </div>
+        <div class="header__menu">
+            <div class="header-menu">
+                <div class="header-menu__item">
+                    <a href="#" class="home">Home</a>
+                </div>
+                <div class="header-menu__item">
+                    <a href="#" class="news">News</a>
+                </div>
+                <div class="header-menu__item">
+                    <a href="#" class="caracters">Comics</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="header__user-profile">
+            <div class="user-profile">
+                <div class="user-profile__cart">
+                    <div class="cart">
+                        <div class="cart__ellipse">
+                            <div class="count">0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-profile__user-photo">
+                    <div class="user-photo">
+                        <img src="./pictures/user.png" alt="user"/>
+                    </div>
+                </div>
+                <div class="user-profile__chevron-down">
+                    <div class="img-chevron-down">
+                        <img src="./pictures/chevron-down.png" alt="chevron-down" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-modalsignup">
+        <div class="popup-modalsignup__body">
+            <div class="modalsignup">
+                <div class="modalsignup__content">
+                    <div class="modalsignup-header">
+                        <div class="modalsignup-header__title"><strong>Signup</strong></div>
+                        <div class="modalsignup-header__subtitle">Already have an account?<a href="#"
+                                class="modalsignup-header__link"> Sign in</a>
+                        </div>
+                    </div>
+                    <div class="form form_signup">
+                        <form name="signup" action="" method="POST">
+                            <div class="form__login">
+                                <input type="text" name="login" placeholder="Michel" required minlength="6" />
+                            </div>
+                            <div class="form__username">
+                                <div class="userfirstname">
+                                    <input type="text" name="firstname" placeholder="First name" />
+                                </div>
+                                <div class="userlastname">
+                                    <input type="text" name="lastname" placeholder="Last name" />
+                                </div>
+                            </div>
+                            <div class="form__email">
+                                <input type="email" name="email" placeholder="Email" required />
+                            </div>
+                            <div class="form__password">
+                                <input type="password" name="password" placeholder="Password" required />
+                            </div>
+                            <div class="form__button">
+                                <div class="form-button form-button_register"><a href="#"
+                                        class="form-button-link">Register</a></div>
+                            </div>
+                            <div class="form__terms">
+                                <div class="form__checkbox">
+                                    <input type="checkbox" name="checkbox" />
+                                </div>
+                                <div class="form__termstext">I have read and agree to the <a href="#"
+                                        class="form__link">Terms of Service</a></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modalsignup__banner"></div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-modalsignin">
+        <div class="popup-modalsignin__body">
+            <div class="modalsignin">
+                <div class="modalsignin__content">
+                    <div class="modalsignin-header">
+                        <div class="modalsignin-header__title"><strong>Signin</strong></div>
+                        <div class="modalsignin-header__subtitle">Don’t have an account?<a href="#"
+                                class="modalsignin-header__link"> Sign up</a></div>
+                    </div>
+                    <div class="form form_signin" action="" method="POST">
+                        <form name="signin">
+                            <div class="form__login">
+                                <input type="text" name="login" placeholder="Michel" />
+                            </div>
+                            <div class="form__password">
+                                <input type="password" name="password" placeholder="Password" />
+                            </div>
+                            <div class="form__button">
+                                <div class="form-button form-button_signin"><a href="#"
+                                        class="form-button-link">Login</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modalsignin__banner"></div>
+            </div>
+        </div>
+    </div>
+    <div class="comics-wrapper">
+        <div class="comics-details">
+            <div class="comics-details__title">
+                <div class="comics-title">Avengers UNIVERSE</div>
+            </div>
+            <div class="comics-details__data">
+                <div class="comics-image">
+                    <div class="card card_comics2"></div>
+                </div>
+                <div class="comics-description">
+                    <div class="comics-description__rating">
+                        <div class="comics-card-vector">
+                            <img src="./pictures/Vector.png" alt="star"/>
+                            <img src="./pictures/Vector.png" alt="star"/>
+                            <img src="./pictures/Vector.png" alt="star"/>
+                            <img src="./pictures/Vector.png" alt="star"/>
+                            <img src="./pictures/Vector-grey.png" alt="star"/>
+                        </div>
+                        <div class="comics-card-value">4.5</div>
+                    </div>
+                    <div class="comics-description__reviews">
+                        <div class="comics-card-reviews"><a href="#" class="reviews">See all reviews</a></div>
+                    </div>
+                    <div class="comics-description__table">
+                        <table>
+                            <tr>
+                                <td><b>Pages:</b></td>
+                                <td>136</td>
+                            </tr>
+                            <tr>
+                                <td><b>Collection:</b></td>
+                                <td>100% Marvel</td>
+                            </tr>
+                            <tr>
+                                <td><b>Date:</b></td>
+                                <td>04/06/2022</td>
+                            </tr>
+                            <tr>
+                                <td><b>Chracters:</b></td>
+                                <td>Avengers</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="comics-description__text">
+                        <div class="comics-details-title">Description</div>
+                        <div class="comics-details-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac dignissim sapien. Integer
+                            suscipit mauris eget arcu ullamcorper tempus. Pellentesque sed facilisis ante. Cras
+                            interdum,
+                            neque nec posuere cursus, nunc dolor mollis velit, id congue sem nibh vitae urna. Maecenas
+                            eleifend scelerisque leo eu pharetra. Suspendisse iaculis, nunc sed porta tincidunt, dolor
+                            metus
+                            tincidunt lacus, quis vehicula ante turpis vel est. Cras tincidunt ligula eget commodo
+                            pharetra.
+                            Phasellus mi sem, ornare a est a, euismod porta diam. Cras lacinia, diam vitae gravida
+                            facilisis, tortor velit tempus sem, sed pellentesque ex elit sit amet enim. Duis eget
+                            sodales
+                            eros. Cras vel tempor dolor, et lacinia neque. Maecenas fermentum ullamcorper purus sit amet
+                            porttitor. Ut urna felis, congue in pellentesque quis, aliquam a mauris. Suspendisse
+                            vestibulum
+                            et libero eget cursus. Nam id molestie nunc, eu placerat quam.
+                        </div>
+                    </div>
+                </div>
+                <div class="comics-purchase">
+                    <div class="comics-purchase__item">
+                        <div class="comics-purchase-price">$41.00</div>
+                        <div class="comics-stock">
+                            <div class="comics-stock__ellipse">
+                                <div class="ellipse ellipse_green"></div>
+                            </div>
+                            <div class="comics-stock__status">
+                                <div class="stock-status">In stock</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comics-purchase__item">
+                        <div class="purchase-button purchase-button_cart"><a href="#" class="button-cart">Add to
+                                cart</a></div>
+                        <div class="purchase-button purchase-button_buy"><a href="#" class="button-buy">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comics-details__reviews">
+                <div class="reviews-title">REVIEWS</div>
+                <div class="reviews-rating">
+                    <div class="reviews-rating__stars">
+                        <div class="comics-card-user-rating">
+                            <div class ="comics-card-vector__item"></div>
+                            <div class ="comics-card-vector__item"></div>
+                            <div class ="comics-card-vector__item"></div>
+                            <div class ="comics-card-vector__item"></div>
+                            <div class ="comics-card-vector__item"></div>
+                        </div>
+                    </div>
+                    <div class="reviews-rating__comment">
+                        <div class="comment-block">
+                            <div class="comment-block__editor">
+                                <div class="editor">
+                                    <div class="editor__item">
+                                        <button type="button" class="button-bold"><i class="fa-solid fa-bold"></i></button>
+                                    </div>
+                                    <div class="editor__item">
+                                        <button type="button" class="button-italic"><i class="fa-solid fa-italic"></i></button>
+                                    </div>
+                                    <div class="editor__item">
+                                        <button type="button" class="button-underline"><i class="fa-solid fa-underline"></i></button>
+                                    </div>
+                                    <div class="editor__item">
+                                        <button type="button" class="button-justify"><i class="fa-solid fa-align-justify"></i></button>
+                                    </div>
+                                    <div class="editor__item">
+                                        <button type="button" class="button-left"><i class="fa-solid fa-align-left"></i></button>
+                                    </div>
+                                    <div class="editor__item">
+                                        <button type="button" class="button-right"><i class="fa-solid fa-align-right"></i></button>
+                                    </div>
+                                    <div class="editor__item">
+                                        <button type="button" class="button-height"><i class="fa-solid fa-text-height"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-block__textarea">
+                                <form class="user-comment-form" action="" method="POST">
+                                    <textarea name ="user-comment" class="user-comment" placeholder="Taping a comment.." maxlength="200"></textarea>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="user-comments-list">
+        <div class="user-comments-list__item">
+            <div class="user-comment-title">
+                <div class="user-photo"> <img src="./pictures/user.png" alt="user"/></div>
+                <div class="user-name">Yoann TERUEL</div> 
+                <div class="comics-card-vector">
+                    <img src="./pictures/Vector.png" alt="star"/>
+                    <img src="./pictures/Vector.png" alt="star"/>
+                    <img src="./pictures/Vector.png" alt="star"/>
+                    <img src="./pictures/Vector.png" alt="star"/>
+                    <img src="./pictures/Vector-grey.png" alt="star"/>
+                </div>
+            </div>
+             <div class="user-comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac aliquam orci. In finibus nunc metus, laoreet aliquet eros tincidunt.</div>
+        </div>
+    </div>
+    <div class="comics-block">
+        <div class="comics-block__title">
+            <div class="comics-block-title">MORE AVENGERS COMICS</div>
+        </div>
+        <div class="comics-block__comics-cards">
+            <div class="comics-card">
+                <div class="comics-card__card">
+                    <div class="card card_comics1"></div>
+                </div>
+                <div class="comics-card__rating">
+                    <div class="comics-card-vector"><img src="./pictures/Vector.png" /></div>
+                    <div class="comics-card-value">4.0</div>
+                </div>
+                <div class="comics-card__price">
+                    <div class="name-info">
+                        <div class="comics-name">Spiderman</div>
+                        <div class="collection-name">Marvel Comics</div>
+                    </div>
+                    <div class="comics-price">$17.00</div>
+                </div>
+                <div class="comics-card__description">
+                    <div class="comics-card-description">
+                    <div class="comics-card-description__top-part">
+                        <div class="comics-plot">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+                            bibendum faucibus semper. Suspendisse potenti. Donec ac massa sem. Pellentesque in bibendum
+                            risus. Pellentesque mattis, quam.</div>
+                    </div>
+                    <div class="comics-card-description__bottom-part">
+                        <div class="comics-price">$17.00</div>
+                        <div class="comics-info">
+                            <div class="comics-info__item">
+                                <div class="comics-name">Spiderman</div>
+                                <div class="collection-name">Marvel Comics</div>
+                            </div>
+                            <div class="comics-info__item">
+                                <div class="comics-button comics-button_release">See details</div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comics-card">
+                <div class="comics-card__card">
+                    <div class="card card_comics2"></div>
+                </div>
+                <div class="comics-card__rating">
+                    <div class="comics-card-vector"><img src="./pictures/Vector.png" /></div>
+                    <div class="comics-card-value">4.5</div>
+                </div>
+                <div class="comics-card__price">
+                    <div class="name-info">
+                        <div class="comics-name">Avengers</div>
+                        <div class="collection-name">Marvel Comics</div>
+                    </div>
+                    <div class="comics-price">$21.00</div>
+                </div>
+                <div class="comics-card__description">
+                    <div class="comics-card-description">
+                    <div class="comics-card-description__top-part">
+                        <div class="comics-plot">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+                            bibendum faucibus semper. Suspendisse potenti. Donec ac massa sem. Pellentesque in bibendum
+                            risus. Pellentesque mattis, quam.</div>
+                    </div>
+                    <div class="comics-card-description__bottom-part">
+                        <div class="comics-price">$21.00</div>
+                        <div class="comics-info">
+                            <div class="comics-info__item">
+                                <div class="comics-name">Avengers</div>
+                                <div class="collection-name">Marvel Comics</div>
+                            </div>
+                            <div class="comics-info__item">
+                                <div class="comics-button comics-button_release">See details</div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comics-card">
+                <div class="comics-card__card">
+                    <div class="card card_comics3"></div>
+                </div>
+                <div class="comics-card__rating">
+                    <div class="comics-card-vector"><img src="./pictures/Vector.png" /></div>
+                    <div class="comics-card-value">2.1</div>
+                </div>
+                <div class="comics-card__price">
+                    <div class="name-info">
+                        <div class="comics-name">Guardian of the Galaxy</div>
+                        <div class="collection-name">Marvel Comics</div>
+                    </div>
+                    <div class="comics-price">$15.00</div>
+                </div>
+                <div class="comics-card__description">
+                    <div class="comics-card-description">
+                    <div class="comics-card-description__top-part">
+                        <div class="comics-plot">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+                            bibendum faucibus semper. Suspendisse potenti. Donec ac massa sem. Pellentesque in bibendum
+                            risus. Pellentesque mattis, quam.</div>
+                    </div>
+                    <div class="comics-card-description__bottom-part">
+                        <div class="comics-price">$15.00</div>
+                        <div class="comics-info">
+                            <div class="comics-info__item">
+                                <div class="comics-name">Guardian of the Galaxy</div>
+                                <div class="collection-name">Marvel Comics</div>
+                            </div>
+                            <div class="comics-info__item">
+                                <div class="comics-button comics-button_release">See details</div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comics-card">
+                <div class="comics-card__card">
+                    <div class="card card_comics4"></div>
+                </div>
+                <div class="comics-card__rating">
+                    <div class="comics-card-vector"><img src="./pictures/Vector.png" /></div>
+                    <div class="comics-card-value">3.5</div>
+                </div>
+                <div class="comics-card__price">
+                    <div class="name-info">
+                        <div class="comics-name">Hulk</div>
+                        <div class="collection-name">Marvel Comics</div>
+                    </div>
+                    <div class="comics-price">$16.00</div>
+                </div>
+                <div class="comics-card__description">
+                    <div class="comics-card-description">
+                    <div class="comics-card-description__top-part">
+                        <div class="comics-plot">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+                            bibendum faucibus semper. Suspendisse potenti. Donec ac massa sem. Pellentesque in bibendum
+                            risus. Pellentesque mattis, quam.</div>
+                    </div>
+                    <div class="comics-card-description__bottom-part">
+                        <div class="comics-price">$16.00</div>
+                        <div class="comics-info">
+                            <div class="comics-info__item">
+                                <div class="comics-name">Hulk</div>
+                                <div class="collection-name">Marvel Comics</div>
+                            </div>
+                            <div class="comics-info__item">
+                                <div class="comics-button comics-button_release">See details</div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer__info">
+            <div class="footer-logo">Logo</div>
+            <div class="footer-copyright">Copyright 2022 Super-Heroes Shop</div>
+            <div class="footer-icons">
+                <div class="footer-icons__item">
+                    <div class="icon icon_instagram"><a href="#"></a></div>
+                </div>
+                <div class="footer-icons__item">
+                    <div class="icon icon_twitter"><a href="#"></a></div>
+                </div>
+                <div class="footer-icons__item">
+                    <div class="icon icon_facebook"><a href="#"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__nav">
+            <div class="footer-menu">
+                <div class="footer-menu__title footer-menu__title_bold">Menu</div>
+                <div class="footer-menu__item">
+                    <a href="#" class="home">Home</a>
+                    <a href="#" class="news">News</a>
+                    <a href="#" class="comics">Comics</a>
+                </div>
+            </div>
+            <div class="footer-menu">
+                <div class="footer-menu__title footer-menu__title_bold">Company</div>
+                <div class="footer-menu__item">
+                    <a href="#" class="management">Management</a>
+                    <a href="#" class="story">Our story</a>
+                    <a href="#" class="career">Career</a>
+                </div>
+            </div>
+            <div class="footer-menu">
+                <div class="footer-menu__title footer-menu__title_bold">Support</div>
+                <div class="footer-menu__item">
+                    <a href="#" class="center">Support Center</a>
+                    <a href="#" class="transaction">Transaction</a>
+                    <a href="#" class="contact">Contact us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</html>

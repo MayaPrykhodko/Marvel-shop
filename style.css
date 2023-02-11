@@ -1,83 +1,441 @@
+@import url("style_signin.css");
+
+@import url("style_list-comics.css");
+
+@import url("style_comics-details.css");
+
+@import url("style_cart.css");
+
+* {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
 /* HEADER */
 .header {
-  display: flex; 
-  min-height: 59px; 
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  min-height: 59px;
+  min-width: 100%;
   justify-content: space-around;
   align-items: center;
   gap: 280px;
   background-color: black;
 }
 
+.header.clicked {
+  gap: 320px;
+}
+
 .header__logo {
   display: flex;
 }
 
-.header__menu{
+.header__menu {
   display: flex;
   font-size: 14px;
 }
 
-.header__auth{
+.header__menu.open {
   display: flex;
 }
 
+.header__auth {
+  display: flex;
+}
+
+.header__icon {
+  display: none;
+  z-index: 50;
+}
+
 .header-logo {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    background-color: #C4C4C4;
-    width: 150px;
-    height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #C4C4C4;
+  width: 150px;
+  height: 42px;
 }
 
 .header-menu {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   gap: 41px;
 }
 
-.header-menu__item{
+.header-menu__item {
   width: 66px;
   text-align: center;
 }
 
-.header-menu__item a{
-  color:#FFFFFF;
+.header-menu__item a {
+  color: #FFFFFF;
   text-decoration: none;
 }
 
-.header-auth{
-  display:flex;
-  justify-content:center;
+.header-menu__item a:hover {
+  color: #EE171F;
+}
+
+.header-menu div:nth-last-child(-n+2) {
+  display: none;
+}
+
+.header-menu__item:hover {
+  transform: scaleY(1.5);
+}
+
+.header-auth {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.header-auth__img{
+.header-auth__img {
   position: absolute;
   z-index: 1;
 }
 
 .button {
- width: 90px;
- height: 23px;
- border-radius: 15px;
- text-align: center;
+  width: 90px;
+  height: 23px;
+  border-radius: 15px;
+  text-align: center;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scaleY(1.3);
+  transition-duration: 0.5s;
 }
 
 .button_signin {
   background-color: #EE171F;
-  color:#C4C4C4;
+  color: #C4C4C4;
 }
 
 .button_signup {
-  background-color:#FFFFFF;
+  background-color: #FFFFFF;
   color: #000000;
+}
+
+.button_signup:hover {
+  border: 2px solid #EE171F;
+}
+
+.button_signin:hover {
+  border: 2px solid #FFFFFF;
+}
+
+.burger {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  z-index: 50;
+  position: relative;
+  width: 30px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 90%;
+  height: 2px;
+  transform: scale(1);
+  background-color: #FFFFFF;
+
+}
+
+.burger:before,
+.burger:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #FFFFFF;
+  transition: all 0.3s ease 0s;
+}
+
+.burger:before {
+  top: 0;
+}
+
+.burger:after {
+  bottom: 0;
+}
+
+.burger.active span {
+  transform: scale(0);
+}
+
+.burger.active:before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+  top: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+
+/* Signup */
+.popup-modalsignup {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s ease 0s;
+  display: flex;
+  justify-content: center;
+}
+
+.popup-modalsignup.opened {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-modalsignup__body {
+  width: fit-content;
+  transform: translateY(110px);
+}
+
+.modalsignup {
+  display: flex;
+  border: 1px solid;
+  border-radius: 20px;
+}
+
+.modalsignup__banner {
+  background-color: #C4C4C4;
+  border-left: 0px;
+  border-radius: 0px 20px 20px 0px;
+  min-height: 342px;
+  min-width: 344px;
+}
+
+.modalsignup__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border-radius: 20px 0px 0px 20px;
+  min-width: 344px;
+}
+
+.modalsignup-header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.modalsignup-header__title {
+  color: black;
+  font-size: 36px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.modalsignup-header__subtitle {
+  font-size: 12px;
+  color: black;
+  margin-bottom: 8px;
+}
+
+.modalsignup-header__link {
+  color: #0093B4;
+}
+
+.form {
+  width: 256px;
+}
+
+.form input {
+  background: #DBDBDB;
+  border-radius: 14px;
+  border: 0.4px solid #DBDBDB;
+  padding: 7px 0px 7px 10px;
+  color: #868686;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+.form input:focus {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+  color: black;
+  outline: none;
+}
+
+.form span {
+  color: red;
+  font-size: 9px;
+  display: none;
+}
+
+.form__login {
+  margin-bottom: 8px;
+}
+
+.form__username {
+  margin-bottom: 8px;
+  display: flex;
+}
+
+.userfirstname input {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.userfirstname {
+  margin-right: 4px;
+}
+
+.userlastname input {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.form__email {
+  margin-bottom: 8px;
+}
+
+.form__password {
+  margin-bottom: 8px;
+}
+
+.form__button {
+  margin-bottom: 8px;
+}
+
+.form-button {
+  border-radius: 11.5px;
+  border: 0.3px;
+  background-color: #EE171F;
+  text-align: center;
+  height: 23px;
+  font-size: 12px;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.25));
+  margin-bottom: 8px;
+}
+
+.form-button-link {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+  height: 100%;
+  padding: 5px 0px 5px 0px;
+}
+
+.form__terms {
+  display: flex;
+  flex-direction: row;
+}
+
+.form__checkbox {
+  margin-right: 7px;
+}
+
+.form input[type=checkbox] {
+  width: 16px;
+  height: 16px;
+}
+
+.form__termstext {
+  font-size: 11px;
+  text-align: left;
+  padding: 4px 10px 3px 0px;
+}
+
+.form__link {
+  color: #0093B4;
+  text-decoration: none;
+}
+
+/* Signin */
+.popup-modalsignin {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s ease 0s;
+  display: flex;
+  justify-content: center;
+}
+
+.popup-modalsignin.opened {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-modalsignin__body {
+  width: fit-content;
+  transform: translateY(150px);
+}
+
+.modalsignin {
+  display: flex;
+  border: 1px solid;
+  border-radius: 20px;
+}
+
+.modalsignin__banner {
+  background-color: #C4C4C4;
+  border-left: 0px;
+  border-radius: 0px 20px 20px 0px;
+  min-width: 344px;
+  min-height: 262px;
+}
+
+.modalsignin__content {
+  background-color: #FFFFFF;
+  border-radius: 20px 0px 0px 20px;
+  min-width: 344px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalsignin-header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.modalsignin-header__title {
+  color: black;
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.modalsignin-header__subtitle {
+  font-size: 12px;
+  color: black;
+  margin-bottom: 8px;
+}
+
+.modalsignin-header__link {
+  color: #0093B4;
 }
 
 /* BANNER */
 .tech-block {
   display: flex;
   background: black;
+  padding-top: 59px;
 }
 
 .banner {
@@ -98,8 +456,7 @@
 
 .banner__review {
   display: flex;
-  flex-basis: 35%;
-  justify-content: space-between;
+  flex-basis: 38%;
   align-items: center;
 }
 
@@ -148,22 +505,21 @@
   font-size: 14px;
 }
 
-.banner-comics-img{
+.banner-comics-img {
   display: flex;
-  align-items: center;
-  min-width: 230px;
-
+  min-width: 220px;
+  min-height: 300px;
 }
 
 .banner-comics-img__item {
   position: absolute;
-} 
+}
 
 .img {
-  min-height:285px;
-  min-width:195px;
-  border-radius: 5px; 
-  background-size:contain;
+  min-height: 285px;
+  min-width: 195px;
+  border-radius: 5px;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
@@ -172,37 +528,38 @@
   transform: rotate(7.83deg);
 }
 
-.img_comics2{
+.img_comics2 {
   background-image: url("pictures/3.png");
   transform: rotate(4.82deg);
 }
 
-.img_comics3{
+.img_comics3 {
   background-image: url("pictures/2.png");
   transform: rotate(2.5deg);
 }
 
-.img_comics4{
+.img_comics4 {
   background-image: url("pictures/1.png");
 }
 
-.banner-comics-description{
+.banner-comics-description {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 25px;    
+  gap: 25px;
 }
 
-.banner-comics-title{
+.banner-comics-description__title {
   font-size: 24px;
 }
 
-.banner-comics-plot{
+.banner-comics-plot {
+  font-weight: 400;
   font-size: 14px;
-  min-width: 284px;
+  min-width: 278px;
 }
 
-.banner-comics-button{
+.comics-button {
   width: 84px;
   height: 23px;
   border-radius: 14px;
@@ -211,14 +568,19 @@
   font-size: 12px;
   text-align: center;
   line-height: 17px;
+  cursor: pointer;
 }
 
-.banner-comics-description__ellipse{
+.comics-button:hover {
+  background-color: lightslategrey;
+}
+
+.banner-comics-description__ellipse {
   position: absolute;
-  transform:translate(-25px,160px);
+  transform: translate(-25px, 160px);
 }
 
-.banner-comics-ellipse{
+.banner-comics-ellipse {
   display: flex;
   gap: 9px;
 }
@@ -226,15 +588,15 @@
 .ellipse {
   min-width: 9px;
   min-height: 9px;
-  background-size:contain;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
-.ellipse_bright{
+.ellipse_bright {
   background-image: url('pictures/Ellipse\ 1.png');
 }
 
-.ellipse_dim{
+.ellipse_dim {
   background-image: url('pictures/Ellipse\ 2.png');
 }
 
@@ -244,11 +606,11 @@
   min-height: 593px;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 
 .release__title {
   display: flex;
-  justify-content: center;
   font-weight: 700;
   font-size: 36px;
   text-transform: uppercase;
@@ -256,8 +618,7 @@
 
 .release__comics-cards {
   display: flex;
-  justify-content: center;
-  gap:48px;
+  gap: 48px;
 }
 
 .comics-card {
@@ -271,6 +632,7 @@
   border-radius: 35px;
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
 }
 
 .card_comics1 {
@@ -335,8 +697,59 @@
   font-size: 14px;
 }
 
+.comics-card__description {
+  opacity: 0;
+  position: absolute;
+  transition: all 1.5s ease 0s;
+  transform: translateY(205px);
+}
+
+.comics-card__description:hover {
+  opacity: 1;
+  visibility: visible;
+  transition: all 1s ease 0s;
+}
+
+.comics-card-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 232px;
+  height: 178px;
+  background: linear-gradient(180deg, rgba(77, 77, 77, 0.83) 0%, #000000 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.comics-card-description__top-part {
+  padding: 19px 8px 0px 8px;
+}
+
+.comics-card-description__bottom-part {
+  padding: 0px 8px 9px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.comics-plot {
+  color: #FFFFFF;
+  font-size: 11px;
+}
+
+.comics-info {
+  display: flex;
+  justify-content: space-between;
+  color: #FFFFFF;
+  align-items: center;
+}
+
+.comics-price {
+  text-align: end;
+}
+
 /* CALENDAR */
-.calendar{
+.calendar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -344,7 +757,7 @@
   min-height: 328px;
 }
 
-.calendar__month{
+.calendar__month {
   color: #FFFFFF;
   font-weight: 700;
   font-size: 24px;
@@ -353,11 +766,11 @@
 .month {
   display: flex;
   justify-content: space-around;
-  align-items:flex-end; 
+  align-items: flex-end;
   min-width: 319px;
   min-height: 200px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .month__poster1 {
@@ -372,8 +785,8 @@
   background-image: url("./pictures/month3.png");
 }
 
-.month__title{
-  margin-bottom: 20px; 
+.month__title {
+  margin-bottom: 20px;
 }
 
 .month__arrow {
@@ -384,6 +797,11 @@
   text-align: center;
   margin-bottom: 20px;
   line-height: 40px;
+}
+
+.month__arrow:hover {
+  background-color: darkgrey;
+  cursor: pointer;
 }
 
 /* CHARACTERS */
@@ -409,13 +827,9 @@
   gap: 25px;
 }
 
-.characters-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
 .characters-card {
+  display: flex;
+  align-items: flex-end;
   border-radius: 35px;
   width: 196px;
   height: 294px;
@@ -435,11 +849,11 @@
   background-image: url("./pictures/Heroes-iron-man.png");
 }
 
-.card_captain-america{
+.card_captain-america {
   background-image: url("./pictures/Heroes-captain-America.png");
 }
 
-.card_captain-marvel{
+.card_captain-marvel {
   background-image: url("./pictures/Heroes-captain-Marvel.png");
 }
 
@@ -461,11 +875,17 @@
   font-size: 18px;
 }
 
+.heroes-name:hover {
+  color: red;
+  transform: scaleY(1.5);
+  cursor: pointer;
+}
+
 /* FOOTER */
 .footer {
   display: flex;
   min-height: 347px;
-  justify-content:center;
+  justify-content: center;
   gap: 540px;
   align-items: center;
 }
@@ -504,7 +924,7 @@
   justify-content: space-between;
   gap: 17px;
 }
- 
+
 .icon {
   display: block;
   width: 37.5px;
@@ -547,8 +967,504 @@
   font-weight: bold;
 }
 
-.footer-menu__item  {
+.footer-menu__item {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+@media (max-width: 1308px) {
+  .banner__search {
+    flex-basis: 33%;
+  }
+
+  .release__comics-cards {
+    gap: 40px;
+  }
+
+  .card {
+    width: 220px;
+  }
+
+  .comics-card-description {
+    width: 225px;
+  }
+
+  .calendar {
+    gap: 48px;
+  }
+
+  .month {
+    min-width: 305px;
+    min-height: 185px;
+  }
+
+  .characters-card,
+  .characters-card__content {
+    width: 180px;
+  }
+
+  .footer {
+    gap: 450px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    gap: 220px;
+  }
+
+  .banner__search {
+    flex-basis: 35%;
+  }
+
+}
+
+@media (max-width: 1121px) {
+  .header {
+    gap: 200px;
+  }
+
+  .banner__search {
+    flex-basis: 38%;
+  }
+
+  .footer {
+    gap: 430px;
+  }
+
+}
+
+@media (max-width: 1080px) {
+  .header {
+    gap: 190px;
+  }
+
+  .tech-block,
+  .release,
+  .calendar,
+  .characters {
+    min-width: 1080px;
+  }
+
+  .banner__review {
+    flex-basis: 38%;
+  }
+
+  .banner-title {
+    font-size: 42px;
+  }
+
+  .banner-welcome-content,
+  .banner-quote-author,
+  .banner-comics-plot {
+    font-size: 13px;
+  }
+
+  .banner-quote-phrase {
+    font-size: 22px;
+  }
+
+  .card {
+    width: 200px;
+    height: 320px;
+  }
+
+  .comics-card__rating {
+    transform: translate(0, 281px);
+  }
+
+
+  .comics-card__description {
+    transform: translateY(180px);
+  }
+
+  .comics-card-description {
+    width: 202px;
+  }
+
+  .calendar {
+    gap: 35px;
+  }
+
+  .month {
+    min-width: 280px;
+    min-height: 165px;
+  }
+
+  .characters-card {
+    width: 160px;
+    height: 255px;
+  }
+
+  .characters-card__content {
+    height: 50px;
+    width: 160px;
+  }
+
+  .footer {
+    gap: 350px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .header {
+    gap: 140px;
+  }
+
+  .header-logo {
+    width: 130px;
+    height: 32px;
+  }
+
+  .button {
+    width: 82px;
+    height: 20px;
+    font-size: 14px;
+  }
+
+  .button_signup {
+    padding-left: 10px;
+  }
+
+  .header-auth__img {
+    height: 40px;
+    width: 36px;
+  }
+
+  .tech-block,
+  .release,
+  .calendar,
+  .characters {
+    min-width: 100%;
+  }
+
+  .banner__search {
+    flex-basis: 36%;
+  }
+
+  .release {
+    min-height: 520px;
+  }
+
+  .release__title {
+    font-size: 28px;
+  }
+
+  .release__comics-cards {
+    gap: 25px;
+  }
+
+  .card {
+    width: 170px;
+    height: 280px;
+  }
+
+  .comics-card__rating {
+    transform: translate(0, 242px);
+  }
+
+  .comics-name, .comics-price {
+    font-size: 12px;
+  }
+  
+  .collection-name {
+    font-size: 10px;
+  }
+
+  .comics-card__description {
+    transform: translateY(150px);
+  }
+
+  .comics-card-description {
+    width: 180px;
+    height: 163px;
+  }
+
+  .comics-card-description__top-part {
+    padding: 14px 5px 0px 5px;
+  }
+  
+  .comics-card-description__bottom-part {
+    padding: 0px 4px 5px 4px;
+  }
+ 
+  .comics-plot {
+    font-size: 10px;
+  }
+ 
+  .calendar {
+    gap: 25px;
+    min-height: 270px;
+  }
+
+  .month {
+    min-width: 240px;
+    min-height: 145px;
+  }
+
+  .characters {
+    min-height: 420px;
+  }
+
+  .characters-card {
+    width: 130px;
+    height: 230px;
+  }
+
+  .characters-card__content {
+    width: 130px;
+  }
+
+  .heroes-name {
+    font-size: 16px;
+  }
+
+  .footer {
+    gap: 190px;
+  }
+}
+
+@media (max-width: 955px) {
+  .header {
+    gap: 110px;
+  }
+
+  .banner {
+    min-height: 450px;
+  }
+
+  .banner__search {
+    flex-basis: 37%;
+  }
+
+  .banner-title {
+    font-size: 32px;
+  }
+
+  .banner-welcome-content,
+  .banner-quote-author,
+  .banner-comics-plot {
+    font-size: 12px;
+  }
+
+  .banner-quote-phrase {
+    font-size: 14px;
+  }
+
+  .banner-comics-img {
+    min-width: 190px;
+    min-height: 240px;
+  }
+
+  .img {
+    min-height: 250px;
+    min-width: 145px;
+  }
+
+  .banner-comics-description__ellipse {
+    position: absolute;
+    transform: translate(-25px, 130px);
+  }
+
+}
+
+@media (max-width: 904px) {
+
+  .tech-block,
+  .release,
+  .calendar,
+  .characters {
+    min-width: 904px;
+  }
+
+  .footer {
+    gap: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    gap: 650px;
+  }
+
+  .header .tech-block,
+  .calendar,
+  .characters,
+  .footer {
+    min-width: 770px;
+  }
+
+  .header__menu,
+  .header__user-profile {
+    display: none;
+  }
+
+  .header__icon {
+    display: flex;
+  }
+
+  .header-menu {
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: auto;
+    animation: burger-animation 0.4s;
+    padding: 50px 40px;
+  }
+
+  @keyframes burger-animation {
+    from {
+      opacity: 0
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+
+  .header-menu__item {
+    font-size: 20px;
+    width: 200px;
+  }
+
+  .banner {
+    min-height: 416px;
+  }
+
+  .banner__search {
+    flex-basis: 35%;
+  }
+
+  .banner-title {
+    font-size: 36px;
+  }
+
+  .banner-quote-phrase {
+    font-size: 16px;
+  }
+
+  .banner-comics-description__ellipse {
+    position: absolute;
+    transform: translate(-25px, 140px);
+  }
+
+  .release__comics-cards {
+    gap: 25px;
+  }
+
+  .card {
+    width: 160px;
+    height: 250px;
+  }
+
+  .comics-card__rating {
+    transform: translate(0, 215px);
+  }
+
+  .comics-name, .comics-price {
+    font-size: 10px;
+  }
+
+  .comics-card__description {
+    transform: translateY(120px);
+  }
+
+  .comics-card-description {
+    width: 165px;
+    height: 156px;
+  }
+
+  .comics-card-description__top-part {
+    padding: 10px 3px 0px 3px;
+  }
+  
+  .comics-card-description__bottom-part {
+    padding: 0px 2px 3px 2px;
+  }
+ 
+  .comics-plot {
+    font-size: 10px;
+  }
+
+  .calendar,
+  .characters {
+    transform: translateX(60px);
+  }
+
+  .month {
+    min-width: 230px;
+  }
+
+  .footer {
+    min-height: 300px;
+  }
+
+  .footer-logo {
+    width: 190px;
+    height: 55px;
+  }
+
+  .footer__info,
+  .footer__nav {
+    font-size: 10px;
+  }
+
+  .footer__info {
+    gap: 17px;
+  }
+
+  .icon {
+    width: 30.5px;
+    height: 30.5px;
+  }
+
+  .footer-menu {
+    gap: 11px;
+    min-height: 140px;
+  }
+
+  .footer-menu__item {
+    gap: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .tech-block,
+  .calendar,
+  .characters,
+  .footer {
+    min-width: 480px;
+  }
+
+  .banner__search {
+    flex-basis: 50%;
+  }
+
+  .banner__review {
+    display: none;
+  }
+
+  .calendar,
+  .characters, .footer {
+    transform: translateX(200px);
+  }
+
+  .footer__info,
+  .footer__nav {
+    font-size: 9px;
+  }
+
+  .footer-menu__item{
+    width: 70px;
+  }
 }

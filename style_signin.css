@@ -1,0 +1,44 @@
+.user-profile {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.cart {
+    background-image: url("./pictures/cart.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+}
+
+.cart__ellipse {
+    transform: translate(15px);
+    position: absolute;
+    text-align: center;
+    background-color: #C01918;
+    width: 10px;
+    height: 10px;
+    border-radius: 8px;
+}
+
+.count {
+    color: #FFFFFF;
+    font-size: 9px;
+}
+
+.img-chevron-down {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    
+    .header__menu,
+    .header__user-profile {
+      display: none;
+    }
+  
+}
