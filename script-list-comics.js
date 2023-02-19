@@ -203,7 +203,7 @@ function showCards(array) {
     let rating = item.rating.toFixed(2);
     let name = item.name;
     let price = item.price.toFixed(2);
-    comicsCard = new ComicsCard(character, imagePath, rating, name, price, template);
+    comicsCard = new ComicsCard(character,imagePath, rating, name, price, template);
     showedCards.push(comicsCard);
   }
 
@@ -263,5 +263,23 @@ document.addEventListener("click", function(e){
   showComicsDetails();
  }
 
+});
+
+// Menu events
+
+const comicsLinks = document.querySelectorAll(".comics");
+
+comicsLinks.forEach(link =>{
+  link.addEventListener("click", function () {
+    document.location.href = "./project_list-comics.html";
+  });
+});
+
+const menuBurger = document.querySelector(".burger");
+menuBurger.addEventListener("click", function () {
+
+  this.classList.toggle("active");
+  document.querySelector(".header__menu").classList.toggle("open");
+  document.querySelector("a.account").parentNode.classList.toggle("active");
 });
 

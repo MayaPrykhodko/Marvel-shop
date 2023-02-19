@@ -8,8 +8,7 @@
 .cart-list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 44px;
+    justify-content: space-around;
     min-height: 600px;
 }
 
@@ -26,7 +25,7 @@
 .added-comics-list {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 20px;
 }
 
 .added-comics {
@@ -105,3 +104,64 @@
     border-radius: 11.5px;
     color: white;
 }
+
+@media (max-width: 1200px) {
+    .added-comics {
+        min-width: 650px;
+    }
+
+    .cart-total {
+        width: 300px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .added-comics {
+        min-width: 600px;
+    }
+
+    .cart-total {
+        width: 270px;
+    }
+}
+
+@media (max-width: 992px) {
+    .added-comics {
+        min-width: 480px;
+    }
+
+    .cart-total {
+        width: 230px;
+    }
+}
+
+@media (max-width: 904px){
+    .added-comics {
+        min-width: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-block {
+     width: 768px;
+    }
+    .cart-list {
+        min-height: 480px;  
+    } 
+
+    .added-comics {
+        min-width: 400px;
+        min-height: 90px;
+    }
+
+    .cart-total {
+        width: 200px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-block {
+     min-width: 480px;
+    }  
+} 

@@ -9,27 +9,24 @@
 * {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  box-sizing: content-box;
 }
 
 /* HEADER */
 .header {
   display: flex;
   position: fixed;
+  width: 100%;
   z-index: 1;
   min-height: 59px;
-  min-width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  gap: 280px;
   background-color: black;
-}
-
-.header.clicked {
-  gap: 320px;
 }
 
 .header__logo {
   display: flex;
+  margin-left: 20px;
 }
 
 .header__menu {
@@ -43,11 +40,14 @@
 
 .header__auth {
   display: flex;
+  margin-right: 20px;
+
 }
 
 .header__icon {
   display: none;
   z-index: 50;
+  margin-right: 20px;
 }
 
 .header-logo {
@@ -66,7 +66,7 @@
 }
 
 .header-menu__item {
-  width: 66px;
+  width: 70px;
   text-align: center;
 }
 
@@ -81,6 +81,10 @@
 
 .header-menu div:nth-last-child(-n+2) {
   display: none;
+}
+
+div.header-menu__item.active {
+  display: block;
 }
 
 .header-menu__item:hover {
@@ -184,7 +188,7 @@
 /* Signup */
 .popup-modalsignup {
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
@@ -363,7 +367,7 @@
 /* Signin */
 .popup-modalsignin {
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
@@ -631,7 +635,7 @@
   height: 352px;
   border-radius: 35px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 
@@ -1010,20 +1014,13 @@
 }
 
 @media (max-width: 1200px) {
-  .header {
-    gap: 220px;
-  }
 
   .banner__search {
     flex-basis: 35%;
   }
-
 }
 
 @media (max-width: 1121px) {
-  .header {
-    gap: 200px;
-  }
 
   .banner__search {
     flex-basis: 38%;
@@ -1036,16 +1033,6 @@
 }
 
 @media (max-width: 1080px) {
-  .header {
-    gap: 190px;
-  }
-
-  .tech-block,
-  .release,
-  .calendar,
-  .characters {
-    min-width: 1080px;
-  }
 
   .banner__review {
     flex-basis: 38%;
@@ -1100,6 +1087,7 @@
   .characters-card__content {
     height: 50px;
     width: 160px;
+    transform: translateY(-10px);
   }
 
   .footer {
@@ -1108,10 +1096,6 @@
 }
 
 @media (max-width: 992px) {
-
-  .header {
-    gap: 140px;
-  }
 
   .header-logo {
     width: 130px;
@@ -1131,13 +1115,6 @@
   .header-auth__img {
     height: 40px;
     width: 36px;
-  }
-
-  .tech-block,
-  .release,
-  .calendar,
-  .characters {
-    min-width: 100%;
   }
 
   .banner__search {
@@ -1165,10 +1142,11 @@
     transform: translate(0, 242px);
   }
 
-  .comics-name, .comics-price {
+  .comics-name,
+  .comics-price {
     font-size: 12px;
   }
-  
+
   .collection-name {
     font-size: 10px;
   }
@@ -1185,15 +1163,15 @@
   .comics-card-description__top-part {
     padding: 14px 5px 0px 5px;
   }
-  
+
   .comics-card-description__bottom-part {
     padding: 0px 4px 5px 4px;
   }
- 
+
   .comics-plot {
     font-size: 10px;
   }
- 
+
   .calendar {
     gap: 25px;
     min-height: 270px;
@@ -1215,6 +1193,7 @@
 
   .characters-card__content {
     width: 130px;
+    transform: translateY(-20px);
   }
 
   .heroes-name {
@@ -1227,9 +1206,6 @@
 }
 
 @media (max-width: 955px) {
-  .header {
-    gap: 110px;
-  }
 
   .banner {
     min-height: 450px;
@@ -1272,28 +1248,18 @@
 
 @media (max-width: 904px) {
 
-  .tech-block,
-  .release,
-  .calendar,
-  .characters {
-    min-width: 904px;
-  }
-
   .footer {
     gap: 170px;
   }
 }
 
 @media (max-width: 768px) {
-  .header {
-    gap: 650px;
-  }
-
-  .header .tech-block,
+  .tech-block,
+  .release,
   .calendar,
   .characters,
   .footer {
-    min-width: 770px;
+   width: 768px;
   }
 
   .header__menu,
@@ -1317,7 +1283,6 @@
     width: 100%;
     z-index: 5;
     background-color: rgba(0, 0, 0, 0.9);
-    overflow-y: auto;
     animation: burger-animation 0.4s;
     padding: 50px 40px;
   }
@@ -1345,14 +1310,6 @@
     flex-basis: 35%;
   }
 
-  .banner-title {
-    font-size: 36px;
-  }
-
-  .banner-quote-phrase {
-    font-size: 16px;
-  }
-
   .banner-comics-description__ellipse {
     position: absolute;
     transform: translate(-25px, 140px);
@@ -1371,7 +1328,8 @@
     transform: translate(0, 215px);
   }
 
-  .comics-name, .comics-price {
+  .comics-name,
+  .comics-price {
     font-size: 10px;
   }
 
@@ -1387,23 +1345,23 @@
   .comics-card-description__top-part {
     padding: 10px 3px 0px 3px;
   }
-  
+
   .comics-card-description__bottom-part {
     padding: 0px 2px 3px 2px;
   }
- 
+
   .comics-plot {
     font-size: 10px;
-  }
-
-  .calendar,
-  .characters {
-    transform: translateX(60px);
   }
 
   .month {
     min-width: 230px;
   }
+
+  .characters__list {
+    max-width: 450px;
+    flex-wrap: wrap;
+    }
 
   .footer {
     min-height: 300px;
@@ -1439,12 +1397,14 @@
 }
 
 @media (max-width: 480px) {
-  .header .tech-block,
+  
+  .tech-block,
+  .release,
   .calendar,
   .characters,
   .footer {
-    min-width: 480px;
-  }
+  min-width: 480px;
+  } 
 
   .banner__search {
     flex-basis: 50%;
@@ -1454,17 +1414,31 @@
     display: none;
   }
 
-  .calendar,
-  .characters, .footer {
-    transform: translateX(200px);
-  }
-
   .footer__info,
   .footer__nav {
     font-size: 9px;
   }
 
-  .footer-menu__item{
+  .footer__nav {
+    gap: 35px;
+  }
+
+  .footer__info {
+    gap: 12px;
+  }
+
+  .footer-logo {
+    width: 150px;
+    height: 55px;
+  }
+
+  .footer-menu {
+    gap: 9px;
+    min-height: 120px;
+  }
+
+  .footer-menu__item {
     width: 70px;
+    gap: 9px;
   }
 }

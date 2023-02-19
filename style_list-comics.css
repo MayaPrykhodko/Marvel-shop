@@ -7,6 +7,12 @@
     padding-top: 59px;
 }
 
+.filter-form__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .filter {
     display: flex;
     align-items: center;
@@ -15,12 +21,6 @@
 
 .filter div {
     display: inline-block;
-}
-
-.filter-form__item {
-    display:flex;
-    flex-direction: column;
-    gap: 10px;
 }
 
 .filter-form select {
@@ -42,15 +42,142 @@
     display: flex;
     flex-wrap: wrap;
     width: 1072px;
-    height:fit-content;
+    height: fit-content;
     gap: 48px;
 }
 
-.sort select {
-    width: 146px;
-    height: 28px;
-    border-radius: 14px;
-    background: #DBDBDB;
-    border-color: #DBDBDB;
-    color: #868686;
+@media (max-width: 1308px) {
+    .filter-form {
+        gap: 525px;
+    }
+
+    .comics-row__comics-cards {
+        max-width: 1030px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .filter-form {
+        gap: 500px;
+    }
+
+    .comics-row__comics-cards {
+        max-width: 1020px;
+        gap: 43px;
+    }
+}
+
+@media (max-width: 1121px) {
+    .filter-form {
+        gap: 480px;
+    }
+
+    .comics-row__comics-cards {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .filter-form {
+        gap: 410px;
+    }
+
+    .comics-row__comics-cards {
+        max-width: 930px;
+    }
+}
+
+@media (max-width: 992px) {
+    .filter-form {
+        gap: 350px;
+    }
+
+    .filter-form select {
+        width: 140px;
+        height: 28px;
+    }
+
+    .comics-row__comics-cards {
+        max-width: 800px;
+    }
+
+}
+
+@media (max-width: 904px) {
+    .filter-form {
+        gap: 330px;
+    }
+
+    .comics-row__comics-cards {
+        gap: 28px;
+        max-width: 780px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header__user-profile {
+        display: none;
+    }
+
+    .filter-form {
+        gap: 150px;
+    }
+
+    .filter-form-title {
+        font-size: 90%;
+    }
+
+    .sort-title {
+        font-size: 90%;
+    }
+
+    .filter-form select {
+        width: 120px;
+        height: 24px;
+    }
+
+    .comics-row__comics-cards {
+        max-width: 550px;
+        gap: 35px;
+    }
+}
+
+@media (max-width: 700px) {
+    .filter-form {
+        transform: translate(40px);
+    }
+
+    .comics-row {
+        transform: translate(40px);
+    }
+}
+
+@media (max-width: 551px) {
+    .filter-form {
+        transform: translate(100px);
+    }
+
+    .comics-row {
+        transform: translate(100px);
+        max-width: 551px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-form {
+        max-width: 480px;
+        gap: 100px;
+        transform: translate(120px);
+    }
+
+    .comics-row {
+        min-width: fit-content;
+        gap: 12px;
+        transform: translate(120px);
+    }
+
+    .footer__nav {
+        gap: 30px;
+    }
 }

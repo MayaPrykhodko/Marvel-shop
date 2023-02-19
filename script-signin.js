@@ -27,6 +27,5 @@ menuBurger.addEventListener("click", function () {
 
   this.classList.toggle("active");
   document.querySelector(".header__menu").classList.toggle("open");
-  document.querySelector(".header").classList.toggle("clicked");
-  document.querySelector(".account").parentElement.style.display ="block";
+  document.querySelector("a.account").parentNode.classList.toggle("active");
 });

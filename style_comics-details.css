@@ -196,13 +196,12 @@ td {
 }
 
 .comment-block__editor {
-    margin: 12px 15px 0px 15px;
+    margin: 8px 10px 0px 10px;
 }
 
 .editor {
     display: flex;
     gap: 9px;
-    width: 397px;
     height: 20px;
     border-bottom: 1px solid #DBDBDB;
 }
@@ -294,4 +293,297 @@ td {
 
 .cart {
     cursor: pointer;
+}
+
+@media (max-width: 1121px) {
+    .comics-details__data {
+        gap: 48px;
+    }
+
+    .comics-description {
+        gap: 12px;
+    }
+
+    .comics-details__reviews {
+        gap: 200px;
+    }
+
+    .comics-details-text {
+        font-size: 11px;
+    }
+
+    .user-comments-list__item {
+        width: 800px;
+    }
+
+    .comics-block-title {
+        width: 1000px;
+    }
+
+    .comics-block__comics-cards {
+        gap: 40px;
+    }
+
+}
+
+@media (max-width: 1080px) {
+    .comics-details {
+        max-width: 900px;
+    }
+
+    .comics-details__data {
+        gap: 35px;
+    }
+
+    .purchase-button {
+        width: 170px;
+        height: 20px;
+    }
+
+    .comics-details__reviews {
+        gap: 170px;
+    }
+
+    .comment-block {
+        width: 400px;
+    }
+
+    .user-comment {
+        width: 380px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .user-comments-list__item {
+        width: 750px;
+    }
+
+    .comics-block {
+        min-height: 530px;
+    }
+
+    .comics-block-title {
+        width: 920px;
+    }
+}
+
+@media (max-width: 992px) {
+    .comics-description {
+        gap: 10px;
+    }
+
+    .comics-description__text {
+        gap: 15px;
+    }
+
+    .purchase-button {
+        width: 180px;
+    }
+
+    .comics-details__reviews {
+        gap: 140px;
+    }
+
+    .comics-details-text {
+        font-size: 9px;
+    }
+
+    .user-comments-list__item {
+        width: 700px;
+    }
+
+    .comics-block-title {
+        width: 900px;
+    }
+}
+
+@media (max-width: 955px) {
+
+    .comics-wrapper {
+        min-height: 780px;
+    }
+
+    .comics-details {
+        max-width: 800px;
+    }
+
+    .comics-description__text {
+        gap: 10px;
+    }
+
+    .purchase-button {
+        width: 150px;
+    }
+
+    .user-comments-list__item {
+        width: 600px;
+    }
+
+    .comics-block {
+        min-height: 500px;
+    }
+
+    .comics-block-title {
+        width: 800px;
+    }
+}
+
+@media (max-width: 904px) {
+    .comics-details {
+        max-width: 700px;
+    }
+
+    .comics-purchase-price {
+        font-size: 18px;
+    }
+
+    .purchase-button {
+        width: 120px;
+    }
+
+    .comment-block {
+        width: 310px;
+    }
+
+    .user-comment {
+        width: 290px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .user-comments-list__item {
+        width: 550px;
+    }
+
+    .comics-block-title {
+        width: 700px;
+    }
+
+    .comics-block__comics-cards {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .comics-wrapper,
+    .comics-block,
+    .user-comments-list {
+        width: 768px;
+    }
+
+    .comics-wrapper {
+        min-height: 720px;
+    }
+
+    .comics-details {
+        max-width: 600px;
+    }
+
+    s .comics-description {
+        width: 550px;
+    }
+
+    .comics-purchase {
+        align-items: center;
+    }
+
+    .comics-purchase__item {
+        padding-left: 0px;
+    }
+
+    .purchase-button {
+        width: 90px;
+    }
+
+    .comics-details__reviews {
+        gap: 125px;
+    }
+
+    .reviews-rating {
+        justify-content: center;
+    }
+
+    .user-comments-list__item {
+        width: 480px;
+    }
+
+    .comics-block {
+        min-height: 650px;
+        align-items: center;
+    }
+
+    .comics-block-title {
+        width: 600px;
+    }
+
+    .comics-block__comics-cards {
+        gap: 20px;
+        max-width: 400px;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .header,
+    .comics-wrapper,
+    .comics-block,
+    .user-comments-list,
+    .footer {
+        min-width: 480px;
+    }
+
+    .comics-wrapper {
+        min-height: 825px;
+    }
+
+    .comics-details {
+        gap: 20px;
+    }
+
+    .comics-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+
+    .comics-details__data {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .comics-description {
+        align-items: center;
+    }
+
+    .comics-description__text {
+        align-items: center;
+    }
+
+    .comics-details-text {
+        text-align: center;
+    }
+
+    .comics-purchase {
+        flex-direction: row;
+        width: 250px;
+        height: 100px;
+    }
+
+    .comics-details__reviews {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .comics-block__title {
+        justify-content: center;
+    }
+
+    .comics-block-title {
+        width: 200px;
+    }
 }

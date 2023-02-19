@@ -12,7 +12,6 @@ const linkSignup = document.querySelector("a.signup");
 const linkSigin = document.querySelector("a.signin");
 
 buttonSignup.addEventListener("click", function () {
-
 openSingnup();
 });
 
@@ -224,7 +223,6 @@ menuBurger.addEventListener("click", function () {
 
   this.classList.toggle("active");
   document.querySelector(".header__menu").classList.toggle("open");
-  document.querySelector(".header").classList.toggle("clicked");
-  document.querySelector("a.signin").parentElement.style.display ="block";
-  document.querySelector("a.signup").parentElement.style.display ="block";
+  document.querySelector("a.signin").parentNode.classList.toggle("active");
+  document.querySelector("a.signup").parentNode.classList.toggle("active");
 });
