@@ -480,7 +480,7 @@ td {
         max-width: 600px;
     }
 
-    s .comics-description {
+    .comics-description {
         width: 550px;
     }
 
@@ -504,6 +504,18 @@ td {
         justify-content: center;
     }
 
+    .comment-block__editor {
+        margin: 4px 5px 0px 5px;
+    }
+
+    .editor {
+        gap: 4px;
+    }
+
+    .editor button {
+        width: 13px;
+    }
+
     .user-comments-list__item {
         width: 480px;
     }
@@ -522,17 +534,15 @@ td {
         max-width: 400px;
         flex-wrap: wrap;
     }
-
 }
 
 @media (max-width: 480px) {
 
-    .header,
     .comics-wrapper,
     .comics-block,
-    .user-comments-list,
-    .footer {
-        min-width: 480px;
+    .user-comments-list {
+        max-width: 480px;
+        min-width: 350px;
     }
 
     .comics-wrapper {
@@ -547,7 +557,8 @@ td {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100px;
+        height: 80px;
+        font-size: 24px;
     }
 
     .comics-details__data {
@@ -557,6 +568,7 @@ td {
 
     .comics-description {
         align-items: center;
+        width: 300px;
     }
 
     .comics-description__text {
@@ -564,7 +576,7 @@ td {
     }
 
     .comics-details-text {
-        text-align: center;
+       text-align: justify;
     }
 
     .comics-purchase {
@@ -579,11 +591,62 @@ td {
         gap: 20px;
     }
 
+    .user-comments-list__item {
+        width: 380px;
+    }
+
+    .comics-block {
+        min-height: 700px;
+    }
+
     .comics-block__title {
         justify-content: center;
     }
 
     .comics-block-title {
         width: 200px;
+    }
+}
+
+@media (max-width: 320px){
+    .comics-wrapper,
+    .comics-block,
+    .user-comments-list {
+        max-width: 320px;
+        min-width: 300px;
+    }
+
+    .comics-title {
+        font-size: 18px;
+        height: 70px;
+    }
+
+    .comics-description {
+        width: 280px;
+    }
+
+    .comics-details-text {
+        font-size: 8px;
+    }
+
+    .comics-purchase {
+        width: 220px;
+        height: 80px;
+    }
+
+    .comics-purchase-price {
+        font-size: 14px;
+    }
+
+    .user-comments-list__item {
+        width: 280px;
+    }
+
+    .user-comment-text {
+        font-size: 9px;
+    }
+
+    .comics-block {
+        min-height: 600px;
     }
 }

@@ -9,7 +9,6 @@
 * {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  box-sizing: content-box;
 }
 
 /* HEADER */
@@ -231,26 +230,25 @@ div.header-menu__item.active {
   background-color: #FFFFFF;
   border-radius: 20px 0px 0px 20px;
   min-width: 344px;
+  gap: 8px;
 }
 
 .modalsignup-header {
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
+  gap: 8px;
 }
 
 .modalsignup-header__title {
   color: black;
   font-size: 36px;
-  margin-bottom: 8px;
   font-weight: 500;
 }
 
 .modalsignup-header__subtitle {
   font-size: 12px;
   color: black;
-  margin-bottom: 8px;
 }
 
 .modalsignup-header__link {
@@ -391,7 +389,6 @@ div.header-menu__item.active {
 .modalsignin {
   display: flex;
   border: 1px solid;
-  border-radius: 20px;
 }
 
 .modalsignin__banner {
@@ -410,6 +407,7 @@ div.header-menu__item.active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 8px;
 }
 
 .modalsignin-header {
@@ -417,18 +415,17 @@ div.header-menu__item.active {
   flex-direction: column;
   text-align: center;
   align-items: center;
+  gap: 8px;
 }
 
 .modalsignin-header__title {
   color: black;
   font-size: 36px;
-  margin-bottom: 8px;
 }
 
 .modalsignin-header__subtitle {
   font-size: 12px;
   color: black;
-  margin-bottom: 8px;
 }
 
 .modalsignin-header__link {
@@ -841,23 +838,23 @@ div.header-menu__item.active {
   background-size: contain;
 }
 
-.card_spiderman {
+.characters-card_spiderman {
   background-image: url("./pictures/Heroes-spiderman.png");
 }
 
-.card_wolverine {
+.characters-card_wolverine {
   background-image: url("./pictures/Heroes-wolverine.png");
 }
 
-.card_iron-man {
+.characters-card_iron-man {
   background-image: url("./pictures/Heroes-iron-man.png");
 }
 
-.card_captain-america {
+.characters-card_captain-america {
   background-image: url("./pictures/Heroes-captain-America.png");
 }
 
-.card_captain-marvel {
+.characters-card_captain-marvel {
   background-image: url("./pictures/Heroes-captain-Marvel.png");
 }
 
@@ -897,7 +894,6 @@ div.header-menu__item.active {
 .footer__info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: flex-start;
   font-size: 12px;
   gap: 21px;
@@ -1018,6 +1014,25 @@ div.header-menu__item.active {
   .banner__search {
     flex-basis: 35%;
   }
+
+  .modalsignup__banner {
+    min-height: 320px;
+    min-width: 310px;
+  }
+
+  .modalsignup__content {
+    min-width: 310px;
+  }
+
+  .modalsignin__banner {
+    min-width: 310px;
+    min-height: 242px;
+  }
+  
+  .modalsignin__content {
+    min-width: 310px;
+  }
+
 }
 
 @media (max-width: 1121px) {
@@ -1117,6 +1132,38 @@ div.header-menu__item.active {
     width: 36px;
   }
 
+  .modalsignup__banner {
+    display: none;
+  }
+
+  .modalsignup__content {
+    border-radius: 20px;
+    min-width: 325px;
+    min-height: 340px;
+    gap: 5px;
+  }
+
+  .modalsignup-header {
+    gap: 3px;
+  }
+
+  .modalsignup-header__title, .modalsignin-header__title {
+    font-size: 32px;
+  }
+
+  .form {
+    width: 226px;
+  }
+
+  .modalsignin__banner {
+    display: none;
+  }
+
+  .modalsignin__content {
+    border-radius: 20px;
+    min-width: 325px;
+  }
+
   .banner__search {
     flex-basis: 36%;
   }
@@ -1193,7 +1240,7 @@ div.header-menu__item.active {
 
   .characters-card__content {
     width: 130px;
-    transform: translateY(-20px);
+    transform: translateY(-18px);
   }
 
   .heroes-name {
@@ -1254,12 +1301,14 @@ div.header-menu__item.active {
 }
 
 @media (max-width: 768px) {
+
+  .header,
   .tech-block,
   .release,
   .calendar,
   .characters,
   .footer {
-   width: 768px;
+    width: 768px;
   }
 
   .header__menu,
@@ -1315,10 +1364,6 @@ div.header-menu__item.active {
     transform: translate(-25px, 140px);
   }
 
-  .release__comics-cards {
-    gap: 25px;
-  }
-
   .card {
     width: 160px;
     height: 250px;
@@ -1361,7 +1406,11 @@ div.header-menu__item.active {
   .characters__list {
     max-width: 450px;
     flex-wrap: wrap;
-    }
+  }
+
+  .characters-card__content {
+    transform: translateY(-25px);
+  }
 
   .footer {
     min-height: 300px;
@@ -1397,21 +1446,90 @@ div.header-menu__item.active {
 }
 
 @media (max-width: 480px) {
-  
+
+  .header,
   .tech-block,
   .release,
   .calendar,
   .characters,
   .footer {
-  min-width: 480px;
-  } 
+    max-width: 480px;
+    min-width: 321px;
+  }
+
+  .modalsignup__content {
+    min-width: 240px;
+    min-height: 250px;
+    gap: 5px;
+  }
+
+  .modalsignup-header__title, .modalsignin-header__title {
+    font-size: 28px;
+  }
+
+  .modalsignup-header__subtitle, .modalsignin-header__subtitle{
+    font-size: 10px;
+  }
+
+  .form {
+    width: 180px;
+  }
+
+  .form input {
+    padding: 5px 0px 5px 7px;
+    font-size: 12px;
+  }
+
+  .form-button {
+    font-size: 11px;
+  }
+
+  .form input[type=checkbox] {
+    width: 12px;
+    height: 12px;
+  }
+
+  .form__checkbox {
+    margin-right: 4px;
+  }
+
+  .form__termstext {
+    font-size: 10px;
+    padding: 2px 5px 2px 0px;
+  }
+  
+  .modalsignin__content {
+    min-width: 240px;
+    gap: 5px;
+  }
 
   .banner__search {
-    flex-basis: 50%;
+    flex-basis: 60%;
   }
 
   .banner__review {
     display: none;
+  }
+
+  .release {
+    min-height: 700px;
+  }
+
+  .release__comics-cards {
+    max-width: 350px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .calendar {
+    flex-wrap: wrap;
+    min-height: 500px;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 25px;
   }
 
   .footer__info,
@@ -1420,11 +1538,12 @@ div.header-menu__item.active {
   }
 
   .footer__nav {
-    gap: 35px;
+    gap: 20px;
   }
 
   .footer__info {
     gap: 12px;
+    align-items: center;
   }
 
   .footer-logo {
@@ -1440,5 +1559,206 @@ div.header-menu__item.active {
   .footer-menu__item {
     width: 70px;
     gap: 9px;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .header,
+  .tech-block,
+  .release,
+  .calendar,
+  .characters,
+  .footer {
+    min-width: 300px;
+    max-width: 320px;
+  }
+
+  .header-logo {
+    width: 90px;
+    height: 20px;
+  }
+
+  .header-menu {
+    padding: 30px 10px;
+    gap: 25px;
+  }
+
+  .header-menu__item {
+    font-size: 16px;
+  }
+
+  .burger {
+    width: 18px;
+    height: 17px;
+  }
+
+  .modalsignup__content {
+    min-width: 200px;
+    min-height: 240px;
+  }
+
+  .modalsignup-header__title, .modalsignin-header__title {
+    font-size: 24px;
+  }
+
+  .modalsignup-header__subtitle, .modalsignin-header__subtitle {
+    font-size: 8px;
+  }
+
+  .form {
+    width: 150px;
+  }
+
+  .form input {
+    padding: 5px 0px 5px 7px;
+    font-size: 10px;
+  }
+
+  .form-button {
+    font-size: 10px;
+  }
+
+  .form__termstext {
+    font-size: 9px;
+  }
+
+  .modalsignin__content {
+    min-width: 200px;
+  }
+
+  .banner {
+    min-height: 200px;
+  }
+
+  .banner__search {
+    flex-basis: 70%;
+    gap: 20px;
+  }
+
+  .banner-title {
+    font-size: 24px;
+  }
+
+  .banner-welcome-content {
+    font-size: 10px;
+  }
+
+  .banner-search {
+    display: flex;
+    justify-content: center;
+  }
+
+  .banner-input {
+    min-height: 20px;
+    min-width: 130px;
+    font-size: 10px;
+  }
+
+  .banner-search__icon {
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    background-image: url("./pictures/search-icon.png");
+    background-size: contain;
+  }
+
+  .search-icon {
+    display: none;
+  }
+
+  .banner-quote {
+    display: none;
+  }
+
+  .release {
+    min-height: 600px;
+  }
+
+  .release-title,
+  .characters-title {
+    font-size: 18px;
+  }
+
+  .release__comics-cards {
+    max-width: 300px;
+    gap: 15px;
+  }
+
+  .card {
+    width: 130px;
+    height: 200px;
+  }
+
+  .comics-card__rating {
+    transform: translateY(165px);
+  }
+
+  .comics-card__description {
+    transform: translateY(120px);
+  }
+
+  .comics-card-description {
+    width: 135px;
+    height: 100px;
+    justify-content: center;
+  }
+
+  .comics-card-description__top-part {
+    display: none;
+  }
+
+  .comics-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .comics-button {
+    width: 74px;
+    height: 19px;
+    font-size: 10px;
+  }
+
+  .month {
+    min-height: 120px;
+  }
+
+  .month__title {
+    font-size: 20px;
+  }
+
+  .characters {
+    gap: 50px;
+  }
+
+  .characters__list {
+    gap: 15px;
+  }
+
+  .characters-card {
+    height: 200px;
+  }
+
+  .characters-card__content {
+    transform: translateY(-5px);
+  }
+
+  .footer__nav {
+    font-size: 6px;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    height: 45px;
+  }
+
+  .footer-menu {
+    min-height: 70px;
+    gap: 7px;
+  }
+
+  .footer-menu__item {
+    gap: 7px;
+    width: 45px;
   }
 }

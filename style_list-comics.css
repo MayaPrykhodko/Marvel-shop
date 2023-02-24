@@ -116,6 +116,11 @@
 
 @media (max-width: 768px) {
 
+    .filter-form,
+    .comics-row {
+        width: 768px;
+    }
+
     .header__user-profile {
         display: none;
     }
@@ -143,41 +148,39 @@
     }
 }
 
-@media (max-width: 700px) {
-    .filter-form {
-        transform: translate(40px);
-    }
-
-    .comics-row {
-        transform: translate(40px);
-    }
-}
-
-@media (max-width: 551px) {
-    .filter-form {
-        transform: translate(100px);
-    }
-
-    .comics-row {
-        transform: translate(100px);
-        max-width: 551px;
-    }
-}
-
 @media (max-width: 480px) {
-    .filter-form {
-        max-width: 480px;
-        gap: 100px;
-        transform: translate(120px);
-    }
 
+    .filter-form,
     .comics-row {
-        min-width: fit-content;
-        gap: 12px;
-        transform: translate(120px);
+        max-width: 480px;
+        min-width: 350px;
     }
 
-    .footer__nav {
-        gap: 30px;
+    .filter-form {
+        gap: 10px;
+        flex-direction: column;
     }
+
+    .comics-row__comics-cards {
+        max-width: 350px;
+        gap: 25px;
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .filter-form,
+    .comics-row {
+        min-width: 300px;
+        max-width: 320px;
+    }
+
+    .comics-row__comics-cards{
+        max-width: 300px;
+        gap: 15px;
+        padding-bottom: 0;
+    }
+
 }

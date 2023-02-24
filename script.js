@@ -196,6 +196,7 @@ signinLoginInput.addEventListener("change", checkLengthLogin);
 signinPasswordInput.addEventListener("change", checkFormatPassword);
 
 // Comics cards buttons event(show card details)
+
 const comicsButtons = document.querySelectorAll(".comics-button");
 
 [...comicsButtons].forEach(button => {
