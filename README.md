@@ -1,4 +1,4 @@
-# Marvel-project
+# Marvel-shop
 Creation of a website with flex, css, javascript of an online comics store;                          
                        
 •	Added hover effects; 
