@@ -6,4 +6,4 @@ Creation of a website with flex, css, javascript of an online comics store;
 •	Added filters. 
 
 Video with presentation
-https://drive.google.com/drive/folders/1bea2BjcWcKUOpceRM2X6xbdnHJ-3dDoi
+https://drive.google.com/file/d/1EWGYj8ulBKBWQ4gRxuqgD1acNo95yCSa/view?usp=sharing
