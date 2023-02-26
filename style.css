@@ -1439,7 +1439,7 @@ div.header-menu__item.active {
 
 @media (max-width: 740px) {
   .banner__search {
-    flex-basis: 60%;
+    flex-basis: 70%;
   }
 
   .banner__review {
