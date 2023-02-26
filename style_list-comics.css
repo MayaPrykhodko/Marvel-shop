@@ -41,7 +41,8 @@
 .comics-row__comics-cards {
     display: flex;
     flex-wrap: wrap;
-    width: 1072px;
+    max-width: 1072px; 
+    justify-content: center;
     height: fit-content;
     gap: 48px;
 }
@@ -100,7 +101,6 @@
     .comics-row__comics-cards {
         max-width: 800px;
     }
-
 }
 
 @media (max-width: 904px) {
@@ -115,11 +115,6 @@
 }
 
 @media (max-width: 768px) {
-
-    .filter-form,
-    .comics-row {
-        width: 768px;
-    }
 
     .header__user-profile {
         display: none;
@@ -150,12 +145,6 @@
 
 @media (max-width: 480px) {
 
-    .filter-form,
-    .comics-row {
-        max-width: 480px;
-        min-width: 350px;
-    }
-
     .filter-form {
         gap: 10px;
         flex-direction: column;
@@ -165,17 +154,12 @@
         max-width: 350px;
         gap: 25px;
         justify-content: center;
+        padding-top: 20px;
         padding-bottom: 50px;
     }
 }
 
 @media (max-width: 320px) {
-
-    .filter-form,
-    .comics-row {
-        min-width: 300px;
-        max-width: 320px;
-    }
 
     .comics-row__comics-cards{
         max-width: 300px;

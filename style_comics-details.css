@@ -466,12 +466,6 @@ td {
 
 @media (max-width: 768px) {
 
-    .comics-wrapper,
-    .comics-block,
-    .user-comments-list {
-        width: 768px;
-    }
-
     .comics-wrapper {
         min-height: 720px;
     }
@@ -536,14 +530,7 @@ td {
     }
 }
 
-@media (max-width: 480px) {
-
-    .comics-wrapper,
-    .comics-block,
-    .user-comments-list {
-        max-width: 480px;
-        min-width: 350px;
-    }
+@media (max-width: 650px) {
 
     .comics-wrapper {
         min-height: 825px;
@@ -568,7 +555,7 @@ td {
 
     .comics-description {
         align-items: center;
-        width: 300px;
+        width: 400px;
     }
 
     .comics-description__text {
@@ -576,7 +563,7 @@ td {
     }
 
     .comics-details-text {
-       text-align: justify;
+        text-align: justify;
     }
 
     .comics-purchase {
@@ -591,14 +578,6 @@ td {
         gap: 20px;
     }
 
-    .user-comments-list__item {
-        width: 380px;
-    }
-
-    .comics-block {
-        min-height: 700px;
-    }
-
     .comics-block__title {
         justify-content: center;
     }
@@ -606,16 +585,28 @@ td {
     .comics-block-title {
         width: 200px;
     }
+
 }
 
-@media (max-width: 320px){
-    .comics-wrapper,
-    .comics-block,
-    .user-comments-list {
-        max-width: 320px;
-        min-width: 300px;
+@media (max-width: 480px) {
+
+    .comics-description {
+        align-items: center;
+        width: 300px;
     }
 
+    .user-comments-list__item {
+        width: 370px;
+    }
+
+    .comics-block {
+        min-height: 700px;
+    }
+
+}
+
+@media (max-width: 320px) {
+   
     .comics-title {
         font-size: 18px;
         height: 70px;

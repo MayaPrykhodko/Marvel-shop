@@ -1395,7 +1395,7 @@ div.header-menu__item.active {
   }
 
   .characters__list {
-    max-width: 450px;
+    max-width: 500px;
     flex-wrap: wrap;
   }
 
@@ -1405,6 +1405,7 @@ div.header-menu__item.active {
 
   .footer {
     min-height: 300px;
+    
   }
 
   .footer-logo {
@@ -1444,6 +1445,29 @@ div.header-menu__item.active {
   .banner__review {
     display: none;
   }
+
+  .release {
+    min-height: 700px;
+  }
+
+  .release__comics-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .calendar {
+    flex-wrap: wrap;
+    min-height: 400px;
+  }
+
+  .footer {
+    gap: 80px;
+  }
+
+  .footer__nav {
+    gap: 20px;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -1494,19 +1518,16 @@ div.header-menu__item.active {
     gap: 5px;
   }
 
-  .release {
-    min-height: 700px;
-  }
-
   .release__comics-cards {
     max-width: 350px;
-    flex-wrap: wrap;
-    justify-content: center;
   }
 
   .calendar {
-    flex-wrap: wrap;
     min-height: 500px;
+  }
+
+  .characters__list {
+    max-width: 400px;
   }
 
   .footer {

@@ -146,9 +146,6 @@
 }
 
 @media (max-width: 768px) {
-    .cart-block {
-        width: 768px;
-    }
 
     .cart-list {
         min-height: 480px;
@@ -165,20 +162,22 @@
     }
 }
 
-@media (max-width: 480px) {
-    .cart-block {
-        max-width: 480px;
-        min-width: 350px;
-    }
-
-    .cart-list__title {
-        font-size: 18px;
-    }
-
+@media (max-width: 650px) {
     .cart-list__items {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+    }
+
+    .cart-total {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .cart-list__title {
+        font-size: 18px;
     }
 
     .added-comics {
@@ -189,7 +188,6 @@
     .cart-total {
         width: 170px;
         height: 80px;
-        gap: 30px;
     }
 
     .cart-total__sum {
@@ -199,10 +197,6 @@
 }
 
 @media (max-width: 320px) {
-    .cart-block {
-        min-width: 300px;
-        max-width: 320px;
-    }
 
     .cart-list {
         min-height: 420px;
