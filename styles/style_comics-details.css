@@ -179,13 +179,13 @@ td {
 .comics-card-vector__item {
     width: 18.5px;
     height: 17.4px;
-    background-image: url("./pictures/Vector-grey.png");
+    background-image: url("../pictures/Vector-grey.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .show-star {
-    background-image: url("./pictures/Vector.png");
+    background-image: url("../pictures/Vector.png");
 }
 
 .comment-block {

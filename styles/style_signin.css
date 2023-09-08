@@ -5,7 +5,7 @@
 }
 
 .cart {
-    background-image: url("./pictures/cart.png");
+    background-image: url("../pictures/cart.png");
     background-repeat: no-repeat;
     background-size: contain;
     height: 24px;

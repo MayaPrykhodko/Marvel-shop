@@ -17,7 +17,7 @@
   display: flex;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 5;
   min-height: 59px;
   justify-content: space-between;
   align-items: center;
@@ -188,7 +188,7 @@ div.header-menu__item.active {
 /* Signup */
 .popup-modalsignup {
   position: fixed;
-  z-index: 5;
+  z-index: 100;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
@@ -444,7 +444,7 @@ div.header-menu__item.active {
   display: flex;
   justify-content: space-around;
   min-height: 496px;
-  background-image: url("pictures/bg.png");
+  background-image: url("../pictures/bg.png");
   color: #FFFFFF;
 }
 
@@ -526,22 +526,31 @@ div.header-menu__item.active {
 }
 
 .img_comics1 {
-  background-image: url("pictures/4.png");
+  background-image: url("../pictures/4.png");
   transform: rotate(7.83deg);
 }
 
 .img_comics2 {
-  background-image: url("pictures/3.png");
+  background-image: url("../pictures/3.png");
   transform: rotate(4.82deg);
 }
 
 .img_comics3 {
-  background-image: url("pictures/2.png");
+  background-image: url("../pictures/2.png");
   transform: rotate(2.5deg);
 }
 
 .img_comics4 {
-  background-image: url("pictures/1.png");
+  background-image: url("../pictures/1.png");
+}
+
+.img_selected {
+  z-index: 1;
+}
+
+.img-title, 
+.img-plot {
+  display: none;
 }
 
 .banner-comics-description {
@@ -587,19 +596,20 @@ div.header-menu__item.active {
   gap: 9px;
 }
 
+.banner-comics-ellipse:hover {
+  cursor: pointer;
+}
+
 .ellipse {
-  min-width: 9px;
-  min-height: 9px;
+  width: 10px;
+  height: 10px;
   background-size: contain;
   background-repeat: no-repeat;
+  background-image: url('../pictures/Ellipse\ 2.png');
 }
 
-.ellipse_bright {
-  background-image: url('pictures/Ellipse\ 1.png');
-}
-
-.ellipse_dim {
-  background-image: url('pictures/Ellipse\ 2.png');
+.ellipse_selected {
+  background-image: url('../pictures/Ellipse\ 1.png');
 }
 
 /* RELEASE */
@@ -638,19 +648,19 @@ div.header-menu__item.active {
 }
 
 .card_comics1 {
-  background-image: url("./pictures/card1.png");
+  background-image: url("../pictures/card1.png");
 }
 
 .card_comics2 {
-  background-image: url("./pictures/card2.png");
+  background-image: url("../pictures/card2.png");
 }
 
 .card_comics3 {
-  background-image: url("./pictures/card3.png");
+  background-image: url("../pictures/card3.png");
 }
 
 .card_comics4 {
-  background-image: url("./pictures/card4.png");
+  background-image: url("../pictures/card4.png");
 }
 
 .comics-card__rating {
@@ -708,7 +718,7 @@ div.header-menu__item.active {
 
 .comics-card__description:hover {
   opacity: 1;
-  visibility: visible;
+  /* visibility: visible; */
   transition: all 1s ease 0s;
 }
 
@@ -759,6 +769,15 @@ div.header-menu__item.active {
   min-height: 328px;
 }
 
+.animated {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.visible {
+   animation: slideFromRight 1s forwards;
+}
+
 .calendar__month {
   color: #FFFFFF;
   font-weight: 700;
@@ -776,15 +795,15 @@ div.header-menu__item.active {
 }
 
 .month__poster1 {
-  background-image: url("./pictures/month1.png");
+  background-image: url("../pictures/month1.png");
 }
 
 .month__poster2 {
-  background-image: url("./pictures/month2.png");
+  background-image: url("../pictures/month2.png");
 }
 
 .month__poster3 {
-  background-image: url("./pictures/month3.png");
+  background-image: url("../pictures/month3.png");
 }
 
 .month__title {
@@ -840,23 +859,23 @@ div.header-menu__item.active {
 }
 
 .characters-card_spiderman {
-  background-image: url("./pictures/Heroes-spiderman.png");
+  background-image: url("../pictures/Heroes-spiderman.png");
 }
 
 .characters-card_wolverine {
-  background-image: url("./pictures/Heroes-wolverine.png");
+  background-image: url("../pictures/Heroes-wolverine.png");
 }
 
 .characters-card_iron-man {
-  background-image: url("./pictures/Heroes-iron-man.png");
+  background-image: url("../pictures/Heroes-iron-man.png");
 }
 
 .characters-card_captain-america {
-  background-image: url("./pictures/Heroes-captain-America.png");
+  background-image: url("../pictures/Heroes-captain-America.png");
 }
 
 .characters-card_captain-marvel {
-  background-image: url("./pictures/Heroes-captain-Marvel.png");
+  background-image: url("../pictures/Heroes-captain-Marvel.png");
 }
 
 .characters-card__content {
@@ -941,15 +960,15 @@ div.header-menu__item.active {
 }
 
 .icon_instagram {
-  background-image: url("./pictures/instagram.png");
+  background-image: url("../pictures/instagram.png");
 }
 
 .icon_twitter {
-  background-image: url("./pictures/twitter.png");
+  background-image: url("../pictures/twitter.png");
 }
 
 .icon_facebook {
-  background-image: url("./pictures/facebook.png");
+  background-image: url("../pictures/facebook.png");
 }
 
 .footer-menu a {
@@ -972,6 +991,13 @@ div.header-menu__item.active {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+@keyframes slideFromRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 1308px) {
@@ -1029,7 +1055,7 @@ div.header-menu__item.active {
     min-width: 310px;
     min-height: 242px;
   }
-  
+
   .modalsignin__content {
     min-width: 310px;
   }
@@ -1147,7 +1173,8 @@ div.header-menu__item.active {
     gap: 3px;
   }
 
-  .modalsignup-header__title, .modalsignin-header__title {
+  .modalsignup-header__title,
+  .modalsignin-header__title {
     font-size: 32px;
   }
 
@@ -1405,7 +1432,7 @@ div.header-menu__item.active {
 
   .footer {
     min-height: 300px;
-    
+
   }
 
   .footer-logo {
@@ -1478,11 +1505,13 @@ div.header-menu__item.active {
     gap: 5px;
   }
 
-  .modalsignup-header__title, .modalsignin-header__title {
+  .modalsignup-header__title,
+  .modalsignin-header__title {
     font-size: 28px;
   }
 
-  .modalsignup-header__subtitle, .modalsignin-header__subtitle{
+  .modalsignup-header__subtitle,
+  .modalsignin-header__subtitle {
     font-size: 10px;
   }
 
@@ -1512,7 +1541,7 @@ div.header-menu__item.active {
     font-size: 10px;
     padding: 2px 5px 2px 0px;
   }
-  
+
   .modalsignin__content {
     min-width: 240px;
     gap: 5px;
@@ -1592,11 +1621,13 @@ div.header-menu__item.active {
     min-height: 240px;
   }
 
-  .modalsignup-header__title, .modalsignin-header__title {
+  .modalsignup-header__title,
+  .modalsignin-header__title {
     font-size: 24px;
   }
 
-  .modalsignup-header__subtitle, .modalsignin-header__subtitle {
+  .modalsignup-header__subtitle,
+  .modalsignin-header__subtitle {
     font-size: 8px;
   }
 
@@ -1653,7 +1684,7 @@ div.header-menu__item.active {
     right: 30px;
     width: 30px;
     height: 30px;
-    background-image: url("./pictures/search-icon.png");
+    background-image: url("../pictures/search-icon.png");
     background-size: contain;
   }
 

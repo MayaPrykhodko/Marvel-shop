@@ -12,10 +12,10 @@ const linkSignup = document.querySelector("a.signup");
 const linkSigin = document.querySelector("a.signin");
 
 buttonSignup.addEventListener("click", function () {
-openSingnup();
+  openSingnup();
 });
 
-linkSignup.addEventListener("click", function() {
+linkSignup.addEventListener("click", function () {
   openSingnup();
 });
 
@@ -195,6 +195,32 @@ const signinPasswordInput = document.querySelector(".form_signin input[type=pass
 signinLoginInput.addEventListener("change", checkLengthLogin);
 signinPasswordInput.addEventListener("change", checkFormatPassword);
 
+// Banner Slider
+
+const bannerEllipses = document.querySelectorAll(".ellipse");
+const bannerImages = document.querySelectorAll(".banner-comics-img__item");
+const bannerImagesTitle = document.querySelectorAll(".img-title");
+const bannerImagesPlot = document.querySelectorAll(".img-plot");
+
+const bannerComicsTitle = document.querySelector(".comics-title");
+const bannerComicsPlot = document.querySelector(".banner-comics-plot");
+
+bannerEllipses.forEach((ellipse, index) => {
+  ellipse.addEventListener("click", function () {
+    bannerImages.forEach(image => image.classList.remove("img_selected"));
+    bannerEllipses.forEach(ellipse => ellipse.classList.remove("ellipse_selected"));
+    bannerImages[index].classList.add("img_selected");
+    ellipse.classList.add("ellipse_selected");
+    bannerComicsTitle.textContent=  bannerImagesTitle[index].textContent;
+    bannerComicsPlot.textContent = bannerImagesPlot[index].textContent;
+  });
+
+  bannerImages[3].classList.add("img_selected");
+  bannerEllipses[3].classList.add("ellipse_selected");
+  bannerComicsTitle.textContent=  bannerImagesTitle[3].textContent;
+  bannerComicsPlot.textContent = bannerImagesPlot[3].textContent;
+});
+
 // Comics cards buttons event(show card details)
 
 const comicsButtons = document.querySelectorAll(".comics-button");
@@ -213,7 +239,7 @@ const comicsButtons = document.querySelectorAll(".comics-button");
 
 const comicsLinks = document.querySelectorAll(".comics");
 
-comicsLinks.forEach(link =>{
+comicsLinks.forEach(link => {
   link.addEventListener("click", function () {
     document.location.href = "./project_list-comics.html";
   });
@@ -227,3 +253,23 @@ menuBurger.addEventListener("click", function () {
   document.querySelector("a.signin").parentNode.classList.toggle("active");
   document.querySelector("a.signup").parentNode.classList.toggle("active");
 });
+
+// Animation blocks
+
+const animatedBlocks = document.querySelectorAll('.animated');
+
+function checkAnimation() {
+  animatedBlocks.forEach(block => {
+    const blockPosition = block.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (blockPosition < windowHeight) {
+      block.classList.add('visible');
+    }
+    else {
+      block.classList.remove('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', checkAnimation);
